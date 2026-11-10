@@ -243,6 +243,7 @@ html:not(.ok) #gate{display:flex}
 @media(prefers-reduced-motion:reduce){.gcard{animation:none}}
 </style>
 <script>try{if(JSON.parse(localStorage.getItem('nkm_visitor_v1')||'null'))document.documentElement.classList.add('ok')}catch(e){}</script>
+<script defer src="/_vercel/insights/script.js"></script>
 
 
 <div id="gate" role="dialog" aria-modal="true" aria-labelledby="gt">
@@ -257,7 +258,7 @@ html:not(.ok) #gate{display:flex}
 <div class="fld"><label for="g-mail">Your email</label><input type="email" id="g-mail" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="254" aria-describedby="e-mail"><p class="err" id="e-mail" role="alert"></p></div>
 <button class="btn p wide" id="gs" type="submit">View portfolio</button>
 <p class="gerr" id="gerr" role="alert"></p>
-<p class="gnote">By continuing, you agree that Navneet may store your name and email and contact you about his work. No spam, and your details are never sold.</p>
+<p class="gnote">By continuing, you agree that Navneet may store your name and email and contact you about his work. No spam, and your details are never sold. Visit statistics (such as approximate location) and resume downloads are recorded.</p>
 </form>
 <noscript><p class="gerr">Please turn on JavaScript to view this portfolio.</p></noscript>
 </div></div>
@@ -532,13 +533,17 @@ function setErr(inp,box,msg,fix){box.textContent='';inp.setAttribute('aria-inval
 function unlock(v){try{localStorage.setItem(K,JSON.stringify({name:v.name,email:v.email,via:v.via,at:Date.now()}))}catch(e){}
   document.documentElement.classList.add('ok');window.scrollTo(0,0);window.dispatchEvent(new Event('resize'))}
 
-function notify(v){
-  if(!C.web3formsKey){console.warn('Visitor gate: web3formsKey is empty in config.js, so no email notification is sent.');return Promise.resolve()}
-  var body={access_key:C.web3formsKey,subject:'New portfolio visitor: '+v.name,from_name:'Portfolio visitor gate',name:v.name,email:v.email,
-    signed_in_with:v.via,visited_at:new Date().toString(),page:location.href,referrer:document.referrer||'direct',
-    timezone:(Intl.DateTimeFormat().resolvedOptions()||{}).timeZone||'',language:navigator.language||'',screen:screen.width+'x'+screen.height,device:navigator.userAgent,botcheck:''};
-  return fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(body)})
-    .then(function(r){return r.json()}).then(function(j){if(!j||!j.success)throw new Error((j&&j.message)||'send failed')})}
+function cf(){try{var f=(new URLSearchParams(location.search).get('from')||sessionStorage.getItem('nkm_from')||'').replace(/[^\w .\-]/g,'').slice(0,40);if(f)sessionStorage.setItem('nkm_from',f);return f||'direct'}catch(e){return 'direct'}}
+cf();
+function payload(v,ev){return {name:v.name,email:v.email,via:v.via||'',event:ev,came_from:cf(),page:location.href,referrer:document.referrer||'direct',
+  timezone:(Intl.DateTimeFormat().resolvedOptions()||{}).timeZone||'',language:navigator.language||'',screen:screen.width+'x'+screen.height,device:navigator.userAgent}}
+function send(v,ev){var jobs=[],pl=payload(v,ev);
+  if(C.notifyEndpoint)jobs.push(fetch(C.notifyEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,body:JSON.stringify(pl)}).then(function(r){if(!r.ok)throw new Error('notify '+r.status)}));
+  if(C.web3formsKey){var w=Object.assign({access_key:C.web3formsKey,subject:(ev=='resume_download'?'Resume downloaded by ':'New portfolio visitor: ')+v.name,from_name:'Portfolio visitor gate',visited_at:new Date().toString(),botcheck:''},pl);
+    jobs.push(fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},keepalive:true,body:JSON.stringify(w)}).then(function(r){return r.json()}).then(function(j){if(!j||!j.success)throw new Error('w3f')}))}
+  if(!jobs.length){console.warn('Visitor gate: no notifyEndpoint or web3formsKey set in config.js, so no notification is sent.');return Promise.resolve()}
+  return Promise.all(jobs.map(function(p){return p.then(function(){return 1},function(){return 0})})).then(function(a){if(a.indexOf(1)<0)throw new Error('send failed')})}
+function notify(v){return send(v,'visit')}
 
 function finish(v){ge.textContent='';btn.disabled=true;var old=btn.textContent;btn.textContent='Please wait...';
   notify(v).then(function(){unlock(v)},function(){btn.disabled=false;btn.textContent=old;ge.textContent='Could not send your details. Check your connection and try again.'})}
@@ -564,6 +569,9 @@ if(C.googleClientId){var sc=document.createElement('script');sc.src='https://acc
   sc.onload=function(){try{google.accounts.id.initialize({client_id:C.googleClientId,callback:onGoogle});
     google.accounts.id.renderButton($('gbtn'),{theme:'outline',size:'large',text:'continue_with',shape:'pill',logo_alignment:'left',width:Math.min(320,Math.max(200,gate.clientWidth-80))});$('gwrap').hidden=false}catch(e){}};
   document.head.appendChild(sc)}
+/* tell me when a known visitor downloads the resume (once per visit) */
+var dlb=$('dl');if(dlb)dlb.addEventListener('click',function(){try{var v=JSON.parse(localStorage.getItem(K)||'null');
+  if(!v||!(C.notifyEndpoint||C.web3formsKey)||sessionStorage.getItem('nkm_dl'))return;sessionStorage.setItem('nkm_dl','1');send(v,'resume_download').catch(function(){})}catch(e){}});
 setTimeout(function(){if(!document.documentElement.classList.contains('ok'))try{nm.focus({preventScroll:true})}catch(e){}},400);
 })();
 </script>

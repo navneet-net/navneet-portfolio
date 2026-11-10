@@ -1,25 +1,25 @@
-PORTFOLIO WITH VISITOR GATE - SETUP
+PORTFOLIO WITH VISITOR GATE + TELEGRAM ALERTS
 
-Visitors must enter a valid name + email (or Continue with Google) before the portfolio opens.
-Each new visitor's details are emailed to you.
+Visitors must enter a valid name + email before the portfolio opens.
+Every new visitor (and every resume download) is sent to your Telegram.
 
-STEP 1 - Email notifications (required)
- 1. Go to https://web3forms.com and create a free access key using admin.navneet.net@gmail.com.
- 2. They email you the key. Open config.js and paste it in web3formsKey: "..."
- 3. Open your live site once, fill the form yourself, and check that the email arrives in admin.navneet.net@gmail.com
-    (also check Spam the first time).
+FILES
+  index.html, config.js, assets/, api/notify.js  -> upload all of these to the GitHub repo that Vercel deploys.
 
-STEP 2 - Continue with Google (optional)
- 1. Google Cloud Console > APIs & Services > Credentials > Create credentials > OAuth client ID > Web application.
- 2. Under Authorized JavaScript origins add your live site address (for example https://yourname.netlify.app).
- 3. Copy the Client ID into config.js as googleClientId: "...apps.googleusercontent.com"
- If you leave it empty the Google button is simply hidden.
-
-STEP 3 - Upload
- Upload everything in this folder (index.html, config.js, assets/) to Netlify, GitHub Pages or Cloudflare Pages.
+TELEGRAM SETUP (one time)
+ 1. In Telegram search @BotFather > send /newbot > give a name and a username ending in "bot".
+    BotFather sends you a token like 123456789:AAxxxxxxxx. Keep it private.
+ 2. Open your new bot in Telegram and press Start, then send "hi".
+ 3. Get your chat id: search @userinfobot in Telegram and press Start. It replies with "Id: 123456789".
+ 4. Vercel > your project > Settings > Environment Variables. Add:
+      TELEGRAM_BOT_TOKEN = (the token from step 1)
+      TELEGRAM_CHAT_ID   = (the number from step 3)
+ 5. Vercel > Deployments > latest > ... > Redeploy (environment variables only apply to new deployments).
+ 6. Open the site, fill the form yourself, and check Telegram.
 
 NOTES
- - A visitor is asked once per browser. They can enter again from another device or after clearing site data.
- - This gate stops normal visitors. It is not a security lock: someone who knows how to read page source can still see the content.
- - The email format is checked, temporary-email domains are blocked, and common typos (gmial.com) are caught.
-   The mailbox itself is not verified; "Continue with Google" gives a verified email.
+ - The token is only inside Vercel settings, never in the page or GitHub.
+ - A visitor is asked once per browser.
+ - This gate stops normal visitors. It is not a security lock.
+ - The email format is checked and temporary-email domains are blocked, but the mailbox itself is not verified.
+ - Add ?from=linkedin (or any word) at the end of your link to see where a visitor came from.
