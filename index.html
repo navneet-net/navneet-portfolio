@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+<title>Navneet Kumar Mishra</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@600;700&display=swap">
+<style>
+/* Layout: engineer's datasheet. Silver canvas, navy panels, blue-to-teal signal accent, mono labels. Single light theme by choice. */
+:root{
+  --bg:#E7EAEF;--surface:#F5F7FA;--surface-2:#EDF0F4;--ink:#0F1A2B;--mute:#556175;--line:#CBD2DC;
+  --blue:#2457F5;--blue-ink:#1E4FE0;--teal:#0B9A94;--navy:#0F1A2B;--on-navy:#EAF0F7;--mid:#9FB0C4;
+  --grad:linear-gradient(90deg,#2457F5,#0EB5AC);
+  --head:'Space Grotesk','Segoe UI',system-ui,sans-serif;--body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font:500 12.5px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(231,234,239,.97);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:700 20px var(--head);letter-spacing:-.02em}.logo b{color:var(--blue)}
+.links{display:flex;gap:2px;align-items:center;font-size:14.5px}
+.links a{padding:8px 12px;border-radius:99px;color:var(--mute);transition:color .2s,background .2s}
+.links a:hover{color:var(--ink)}
+.links a.on{color:var(--blue-ink);background:rgba(36,87,245,.1);font-weight:600}
+.links a.hire{background:var(--navy);color:#fff;font-weight:600;margin-left:8px;padding:8px 18px}
+.links a.hire:hover{background:var(--blue)}
+.burger{display:none;width:44px;height:44px;border:1px solid var(--line);background:var(--surface);border-radius:12px;cursor:pointer;font-size:20px}
+#bar{position:absolute;left:0;bottom:-1px;height:3px;width:100%;background:var(--grad);transform:scaleX(0);transform-origin:0 50%}
+@media(max-width:1060px){.burger{display:block}
+.links{position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;background:var(--bg);border-bottom:1px solid var(--line);padding:10px max(16px,env(safe-area-inset-right,0px)) 16px max(16px,env(safe-area-inset-left,0px));gap:2px;display:none}
+nav.open .links{display:flex}.links a{padding:12px 14px}.links a.hire{margin:8px 0 0;text-align:center}}
+
+/* hero */
+.hero{position:relative;padding:48px 0 0;background:radial-gradient(circle at 1px 1px,rgba(15,26,43,.13) 1.2px,transparent 1.7px) 0 0/26px 26px,radial-gradient(520px 360px at 12% 18%,rgba(36,87,245,.13),transparent 70%),radial-gradient(520px 380px at 88% 70%,rgba(14,181,172,.16),transparent 70%)}
+.hero .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:28px;align-items:center;min-height:min(640px,calc(100vh - 64px))}
+@media(max-width:860px){.hero .grid{grid-template-columns:1fr;min-height:0}}
+.pill{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:6px 16px;font-size:14px;color:var(--mute);margin-bottom:22px}
+.pill i{width:8px;height:8px;border-radius:50%;background:#16A34A;box-shadow:0 0 0 4px rgba(22,163,74,.18)}
+h1{font:700 clamp(46px,8vw,90px)/.96 var(--head);letter-spacing:-.045em;margin:0 0 20px}
+h1 .ln{display:block;overflow:hidden;padding-bottom:.08em}
+h1 .ln.g{color:var(--blue-ink)}
+h1 i{display:inline-block;font-style:normal;transform:translateY(112%);animation:up .75s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes up{to{transform:none}}
+.role{font:600 clamp(20px,2.6vw,28px) var(--head);height:1.45em;overflow:hidden;color:var(--blue-ink);margin-bottom:26px}
+.role span{display:block;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .45s}
+.hero .pill,.hero .role,.hero .btns{opacity:0;animation:rise .8s cubic-bezier(.2,.8,.2,1) forwards}
+.hero .pill{animation-delay:.05s}.hero .role{animation-delay:.9s}.hero .btns{animation-delay:1.05s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:10px;font-weight:600;font-size:16px;border:1px solid var(--line);background:var(--surface);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px -14px rgba(15,26,43,.5)}
+.btn.p{background:var(--blue);border-color:var(--blue);color:#fff}.btn.p:hover{background:#1a47d6}
+.stage{position:relative;border:1px solid var(--line);border-radius:22px;background:var(--surface);overflow:hidden}
+.stage svg{display:block;width:100%;height:auto}
+.stage .live{position:absolute;right:16px;top:14px;color:var(--mute)}
+.strip{margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);background:var(--navy);border-radius:18px;color:var(--on-navy);overflow:hidden}
+.strip div{padding:22px 24px;border-right:1px solid rgba(255,255,255,.12)}.strip div:last-child{border:0}
+.strip b{display:block;font:700 clamp(30px,5vw,48px)/1 var(--head);background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;width:max-content;max-width:100%}
+.strip span{color:var(--mid);font-size:14px}
+@media(max-width:700px){.strip{grid-template-columns:repeat(2,1fr)}.strip div:nth-child(2){border-right:0}.strip div:nth-child(n+3){border-top:1px solid rgba(255,255,255,.12)}}
+
+/* sections */
+section{padding:92px 0 0;content-visibility:auto;contain-intrinsic-size:auto 640px}
+.tag{display:inline-flex;align-items:center;gap:10px;color:var(--teal);margin-bottom:12px}
+.tag::before{content:"";width:22px;height:2px;background:var(--grad)}
+h2{font:700 clamp(32px,5vw,54px)/1.02 var(--head);letter-spacing:-.04em;margin:0 0 32px;text-wrap:balance}
+h2 u{text-decoration:none;color:var(--blue-ink)}
+.rv,.ob{will-change:auto}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .w{display:inline-block;opacity:0;transform:translateY(.55em);transition:opacity .55s,transform .65s cubic-bezier(.2,.8,.2,1)}
+.js .in .w{opacity:1;transform:none}
+.js .tag{opacity:0;transform:translateX(-12px);transition:opacity .5s,transform .5s}.js .tag.in{opacity:1;transform:none}
+.js .rv .chips li{opacity:0;transform:scale(.86)}
+.js .rv.in .chips li{opacity:1;transform:none;transition:opacity .4s,transform .45s cubic-bezier(.3,1.4,.5,1)}
+.card{border:1px solid var(--line);border-radius:20px;background:var(--surface);transition:border-color .25s,box-shadow .25s}
+@media(hover:hover){.card:hover{border-color:var(--blue);box-shadow:0 18px 40px -26px rgba(36,87,245,.7)}}
+
+/* resume */
+.resume{display:grid;grid-template-columns:170px minmax(0,1fr);gap:32px;padding:26px;align-items:center}
+.rprev{width:170px;border:1px solid var(--line);border-radius:10px;overflow:hidden;cursor:zoom-in;padding:0;background:#fff;box-shadow:0 18px 30px -22px rgba(15,26,43,.6);transition:transform .25s}
+@media(hover:hover){.rprev:hover{transform:translateY(-4px) rotate(-1deg)}}
+.rprev img{width:100%;height:auto}
+.rd{font-size:19px;margin:0 0 6px;max-width:30em}.rm{color:var(--mute);margin:0 0 20px}
+@media(max-width:620px){.resume{grid-template-columns:1fr;justify-items:start}}
+
+/* about */
+.about{display:grid;grid-template-columns:320px 1fr;gap:44px;align-items:center}
+@media(max-width:820px){.about{grid-template-columns:1fr;gap:56px}}
+.pw{position:relative;width:min(272px,72vw);aspect-ratio:1;margin:0 auto;padding:7px;border-radius:50%;background:linear-gradient(135deg,#2457F5,#0EB5AC);animation:hover 5.5s ease-in-out infinite;box-shadow:0 30px 50px -28px rgba(15,26,43,.65)}
+.pw .photo{width:100%;height:100%;border-radius:50%;overflow:hidden;border:5px solid var(--surface);background:var(--surface-2)}
+.pw .photo img{width:100%;height:100%;object-fit:cover}
+.pw .orbit{position:absolute;inset:-26px;border-radius:50%;border:1.5px dashed #9AA7B8;animation:spin 30s linear infinite}
+.pw .orbit::after{content:"";position:absolute;top:-6px;left:50%;width:11px;height:11px;margin-left:-5px;border-radius:50%;background:var(--teal)}
+.off .pw,.pw.off,.pw.off .orbit{animation-play-state:paused}
+@keyframes hover{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.about p{font-size:18px;margin:0 0 16px;max-width:37em}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:24px}
+.facts div{padding:16px 18px}.facts b{display:block;font:600 17px var(--head)}.facts span{color:var(--mute);font-size:14px}
+
+/* skills */
+.grid3{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:16px}
+.sk{padding:24px}.sk h3{font:700 19px var(--head);margin:0 0 14px;letter-spacing:-.02em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.chips li{border:1px solid var(--line);background:var(--surface-2);border-radius:99px;padding:3px 14px;font-size:14.5px}
+.sk .chips li{color:var(--blue-ink);border-color:rgba(36,87,245,.28);background:rgba(36,87,245,.06)}
+
+/* projects */
+.proj{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:40px;padding:32px;margin-bottom:20px;align-items:center}
+.proj.flip{grid-template-columns:minmax(0,1fr) minmax(0,300px)}
+.proj.flip .pv{order:2}
+@media(max-width:820px){.proj,.proj.flip{grid-template-columns:1fr;padding:20px;gap:24px}.proj.flip .pv{order:0}}
+.phone{position:relative;width:min(260px,100%);aspect-ratio:9/16;margin:0 auto;border-radius:28px;overflow:hidden;background:#000;border:6px solid var(--navy);box-shadow:0 30px 50px -30px rgba(15,26,43,.7)}
+.phone video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.snd{position:absolute;right:10px;bottom:10px;border:0;border-radius:99px;padding:7px 13px;font:600 12.5px var(--body);color:#fff;background:rgba(15,26,43,.78);cursor:pointer}
+.snd:hover{background:var(--blue)}
+.pv.art{border-radius:16px;background:var(--navy);min-height:240px;display:grid;place-items:center}
+.pv.art svg{width:78%;max-width:300px}
+.when{color:var(--teal);margin:0 0 10px}
+.proj h3{font:700 clamp(24px,3vw,32px)/1.1 var(--head);margin:0 0 8px;letter-spacing:-.03em}
+.proj .d{color:var(--mute);margin:0 0 16px}
+.shots{display:flex;gap:12px;align-items:center;margin-top:18px;flex-wrap:wrap}
+.thumb{display:block;width:150px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface-2);cursor:zoom-in;padding:0}
+.thumb img{width:100%;height:auto}
+.shots small{color:var(--mute);font-size:14px;max-width:16em}
+.dash{stroke-dasharray:420;stroke-dashoffset:420}.in .dash{animation:draw 2s .3s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+/* eYRC */
+.eh{display:flex;flex-wrap:wrap;gap:10px;margin:-8px 0 18px}
+.px{border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:6px 14px;font-size:14.5px}.px b{font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--teal);margin-right:6px}
+.eintro{color:var(--mute);max-width:42em;margin:0 0 20px}
+.mem{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:0 0 26px}.mem .mono{color:var(--teal)}
+.tasks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+@media(max-width:860px){.tasks{grid-template-columns:1fr}}
+.task{padding:22px 24px 14px}
+.task header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px}
+.task h3{font:700 22px var(--head);margin:0;letter-spacing:-.02em}
+.tot{font:700 30px/1 var(--head);text-align:right;white-space:nowrap}.tot small{font:500 14px var(--body);color:var(--mute)}
+.st{display:inline-block;margin-top:6px;font:500 11.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:99px}
+.st.done{background:rgba(11,154,148,.13);color:#087A75}.st.live{background:rgba(36,87,245,.12);color:var(--blue-ink)}
+.sub{display:grid;grid-template-columns:34px minmax(0,1fr) 84px 92px;gap:12px;align-items:center;padding:12px 0;border-top:1px solid var(--line)}
+.sub b{font:600 15px var(--head)}
+.sub .m{font:500 13px var(--mono);text-align:right;white-space:nowrap}
+.bar{height:8px;border-radius:99px;background:var(--surface-2);border:1px solid var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--grad);transform-origin:0 50%;transform:scaleX(var(--s))}
+.js .rv .bar i{transform:scaleX(0)}.js .rv.in .bar i{transform:scaleX(var(--s));transition:transform 1s .3s cubic-bezier(.2,.8,.2,1)}
+.vl{text-align:right}.vl a{font-weight:600;font-size:14px;color:var(--blue-ink)}.vl a:hover{text-decoration:underline}.vl span{color:var(--mute);font-size:13px}
+@media(max-width:480px){.sub{grid-template-columns:30px minmax(0,1fr) 76px;row-gap:4px}.sub .vl{grid-column:2/-1;text-align:left}}
+
+/* timeline */
+.tl{border-left:2px solid var(--line);margin-left:8px;padding-left:30px;position:relative}
+.tl::after{content:"";position:absolute;left:-2px;top:0;width:2px;height:100%;background:linear-gradient(var(--blue),var(--teal),transparent)}
+.tl article{position:relative;margin-bottom:34px}
+.tl article::before{content:"";position:absolute;left:-39px;top:9px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--blue)}
+.tl .now::before{background:var(--blue)}
+.tl h3{font:700 24px var(--head);margin:0 0 2px;letter-spacing:-.02em}.tl p{margin:2px 0;color:var(--mute);max-width:44em}
+.tl .when{margin:0 0 6px}
+.lnk{display:inline-block;margin-top:10px;font-weight:600;color:var(--blue-ink);border:0;background:none;padding:0;cursor:pointer;border-bottom:2px solid currentColor;font-size:15px}
+
+/* education */
+.edu{padding:6px 26px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border:0}.row b{font:600 19px var(--head)}.row span{color:var(--mute);font-size:15px;display:block;font-weight:400;font-family:var(--body)}
+.row em{font:700 22px var(--head);font-style:normal;color:var(--blue-ink);white-space:nowrap}
+
+/* certificates */
+.certs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:16px}
+.cert{display:flex;flex-direction:column;overflow:hidden;min-width:0}
+.cert .tile{position:relative;height:190px;background:var(--surface-2);border:0;border-bottom:1px solid var(--line);padding:0;cursor:zoom-in;overflow:hidden;display:block;width:100%}
+.cert .tile img{width:100%;height:100%;object-fit:cover;object-position:top}
+.cert .tile.ph{cursor:default;display:grid;place-items:center;background:linear-gradient(135deg,#16233A,#0F1A2B);color:var(--on-navy);font:700 22px var(--head);text-align:center;padding:16px}
+.cert .badge{position:absolute;left:12px;top:12px;background:var(--navy);color:#fff;border-radius:8px;padding:4px 10px;font:500 12px var(--mono);letter-spacing:.04em}
+.cert .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:2px;flex:1}
+.cert b{font:600 17px/1.3 var(--head)}.cert span{color:var(--mute);font-size:14.5px}
+.cert .acts{display:flex;gap:14px;margin-top:auto;padding-top:12px}
+.cert .acts a,.cert .acts button{font-weight:600;font-size:14.5px;color:var(--blue-ink);background:none;border:0;padding:0;cursor:pointer}
+.cert .acts a:hover,.cert .acts button:hover{text-decoration:underline}
+
+/* contact */
+.contact{background:var(--navy) radial-gradient(circle at 1px 1px,rgba(255,255,255,.09) 1.2px,transparent 1.7px) 0 0/26px 26px;color:var(--on-navy);border-radius:26px;padding:56px 28px;text-align:center}
+.contact .tag{color:#5EEAD4}
+.contact h2{margin-bottom:12px}.contact h2 u{color:#7FA2FF}
+.contact p{color:var(--mid);margin:0 auto 10px;max-width:34em}
+.contact .info{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:center;margin:0 0 28px;font:500 16px var(--mono);color:var(--on-navy);user-select:all}
+.contact .btns{justify-content:center}
+.contact .btn{background:transparent;border-color:rgba(255,255,255,.25);color:var(--on-navy)}
+.contact .btn:hover{background:rgba(255,255,255,.08)}
+.contact .btn.p{background:var(--blue);border-color:var(--blue);color:#fff}
+footer{padding:34px 0 44px;color:var(--mute);font-size:14px;text-align:center}
+
+/* lightbox */
+#lb{position:fixed;inset:0;z-index:100;background:rgba(10,16,28,.88);display:none;align-items:center;justify-content:center;padding:calc(20px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(20px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+#lb.open{display:flex}
+#lb img{max-width:100%;max-height:100%;width:auto;height:auto;border-radius:10px;background:#fff;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+#lb button{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px));width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--ink);font-size:22px;cursor:pointer}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv,.js .w,.js .tag,.js .rv .chips li{opacity:1;transform:none}.js .rv .bar i{transform:scaleX(var(--s))}
+  h1 i{transform:none}.hero .pill,.hero .role,.hero .btns{opacity:1}.dash{stroke-dashoffset:0}html{scroll-behavior:auto}
+}
+</style>
+
+<nav id="nav"><div class="wrap">
+<a class="logo" href="#home">navneet<b>.</b>dev</a>
+<button class="burger" id="bg" aria-label="Menu" aria-expanded="false">☰</button>
+<div class="links" id="links"><a href="#home">Home</a><a href="#resume">Resume</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#eyrc">eYRC</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#certificates">Certificates</a><a class="hire" href="#contact">Contact</a></div>
+</div><div id="bar"></div></nav>
+
+<main>
+<header class="hero" id="home"><div class="wrap">
+<div class="grid">
+<div>
+<span class="pill"><i></i>Open to internships</span>
+<h1 id="name" aria-label="Navneet Kumar Mishra"><span class="ln">Navneet</span><span class="ln">Kumar</span><span class="ln g">Mishra</span></h1>
+<div class="role" id="role"><span>Embedded Systems</span></div>
+<div class="btns"><a class="btn p" href="#projects">View projects</a><a class="btn" href="#resume">Resume</a><a class="btn" href="#contact">Contact me</a></div>
+</div>
+<div class="stage"><span class="live mono">Move your cursor</span>
+<svg viewBox="0 0 600 460" id="arm" role="img" aria-label="Robotic arm following your cursor">
+<defs><pattern id="g" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#CBD2DC"/></pattern></defs>
+<rect width="600" height="460" fill="url(#g)"/>
+<rect x="230" y="388" width="140" height="34" rx="10" fill="#0F1A2B"/>
+<line id="l1" stroke="#0F1A2B" stroke-width="26" stroke-linecap="round"/>
+<line id="l2" stroke="#2457F5" stroke-width="20" stroke-linecap="round"/>
+<g stroke="#0B9A94" stroke-width="5" stroke-linecap="round"><line id="ga"/><line id="gb"/></g>
+<circle id="j0" r="14" fill="#F5F7FA" stroke="#0B9A94" stroke-width="4"/>
+<circle id="j1" r="11" fill="#F5F7FA" stroke="#0B9A94" stroke-width="4"/>
+<circle id="tg" r="8" fill="none" stroke="#2457F5" stroke-width="2" stroke-dasharray="3 3"/>
+</svg></div>
+</div>
+<div class="strip rv" id="strip">
+<div><b data-n="98">98</b><span>e-Yantra eLSI score (out of 100)</span></div>
+<div><b data-n="3">3</b><span>Robot projects</span></div>
+<div><b data-n="6">6</b><span>Certificates</span></div>
+<div><b data-n="300">300</b><span>eYRC marks, Tasks 0–2</span></div>
+</div></div></header>
+
+<div class="wrap">
+<section id="resume">
+<div class="tag mono ob">Resume</div>
+<h2 class="ob">Take my <u>resume</u>.</h2>
+<div class="card resume rv">
+<button class="rprev" type="button" data-lb="assets/resume-l.webp" data-alt="Resume of Navneet Kumar Mishra"><img src="assets/resume-t.webp" alt="Resume preview" width="360" height="509" loading="lazy" decoding="async"></button>
+<div><p class="rd">Education, skills, projects, certifications and experience on one A4 page.</p>
+<p class="rm mono">PDF · 1 page · Updated 25 Aug 2026</p>
+<div class="btns"><a class="btn p" id="dl" href="assets/Navneet_Kumar_Mishra_Resume.pdf" target="_blank" rel="noopener">Download PDF</a><button class="btn" type="button" data-lb="assets/resume-l.webp" data-alt="Resume of Navneet Kumar Mishra">Preview</button></div></div>
+</div>
+</section>
+
+<section id="about">
+<div class="tag mono ob">About</div>
+<h2 class="ob">Building robots that <u>work</u>.</h2>
+<div class="about rv">
+<div class="pw" id="pw"><div class="orbit"></div><div class="photo"><img src="assets/navneet.webp" alt="Navneet Kumar Mishra" width="520" height="520" decoding="async"></div></div>
+<div><p>Currently pursuing a Bachelor of Technology in Electronics and Communication Engineering at Government Engineering College Kishanganj, I am keen on deepening my understanding of Robotics and modern intelligent technologies. My focus lies in fostering technical innovation while advancing my skills in Embedded Systems and Robot Operating System (ROS).</p>
+<p>As a Technical Student Coordinator at e-Yantra Lab, I engage in facilitating technical projects and activities centered on Robotics, ROS2, Embedded Systems, and AI. My role emphasizes innovation-driven engineering and collaborative learning to develop practical solutions.</p>
+<div class="facts"><div class="card"><b>GEC Kishanganj</b><span>B.Tech ECE, 2028</span></div><div class="card"><b>Bihar, India</b><span>Samastipur</span></div><div class="card"><b>Robotics · IoT</b><span>Focus areas</span></div></div></div>
+</div>
+</section>
+
+<section id="skills">
+<div class="tag mono ob">Skills</div>
+<h2 class="ob">My <u>toolkit</u>.</h2>
+<div class="grid3">
+<div class="card sk rv"><h3>Programming</h3><ul class="chips"><li>C</li><li>C++</li><li>Python</li></ul></div>
+<div class="card sk rv"><h3>Embedded</h3><ul class="chips"><li>Embedded C</li><li>Arduino</li><li>ESP32</li><li>STM32</li><li>Raspberry Pi</li></ul></div>
+<div class="card sk rv"><h3>Protocols</h3><ul class="chips"><li>UART</li><li>I2C</li><li>SPI</li><li>MQTT</li></ul></div>
+<div class="card sk rv"><h3>Robotics</h3><ul class="chips"><li>ROS2</li><li>IoT</li><li>Sensors</li><li>Actuators</li></ul></div>
+<div class="card sk rv"><h3>Design</h3><ul class="chips"><li>SOLIDWORKS</li><li>MATLAB</li><li>3D Printing</li><li>Proteus</li></ul></div>
+<div class="card sk rv"><h3>Tools</h3><ul class="chips"><li>Git</li><li>GitHub</li><li>PlatformIO</li><li>STM32CubeIDE</li><li>VS Code</li></ul></div>
+</div>
+</section>
+
+<section id="projects">
+<div class="tag mono ob">Projects</div>
+<h2 class="ob">Things I’ve <u>built</u>.</h2>
+<article class="card proj rv">
+<div class="pv"><div class="phone" id="phone"><video id="vid" src="assets/arm-demo.mp4" poster="assets/arm-poster.webp" muted loop playsinline preload="none" aria-label="Mobile Robotic Arm demo video"></video><button class="snd" id="snd" type="button" aria-pressed="false">Sound on</button></div></div>
+<div><div class="when mono">Feb – May 2026</div><h3>Mobile Robotic Arm</h3>
+<p class="d">3D-printed arm on an ESP32 platform with a web dashboard and live camera feed.</p>
+<ul class="chips"><li>ESP32</li><li>SOLIDWORKS</li><li>ESP32-CAM</li><li>IoT</li></ul>
+<div class="shots"><button class="thumb" type="button" data-lb="assets/robot.webp" data-alt="Mobile Robotic Arm, built photo"><img src="assets/robot.webp" alt="Mobile Robotic Arm on its wheeled base" width="900" height="710" loading="lazy" decoding="async"></button><small>The finished build: arm on a two-wheel base. Tap to enlarge.</small></div>
+</div>
+</article>
+<article class="card proj flip rv">
+<div><div class="when mono">Feb – May 2026</div><h3>Metal Detection Robot</h3>
+<p class="d">Wireless robot that finds metal and sends real-time alerts to a dashboard.</p>
+<ul class="chips"><li>ESP32</li><li>Embedded C</li><li>Sensors</li><li>IoT</li></ul></div>
+<div class="pv art"><svg viewBox="0 0 300 220" fill="none" stroke-linecap="round" aria-hidden="true"><rect class="dash" x="60" y="110" width="140" height="50" rx="12" stroke="#5B8CFF" stroke-width="5"/><circle cx="90" cy="172" r="14" stroke="#EAF0F7" stroke-width="4"/><circle cx="170" cy="172" r="14" stroke="#EAF0F7" stroke-width="4"/><path d="M200 135h40l20 40" stroke="#9FB0C4" stroke-width="6"/><circle cx="262" cy="182" r="18" stroke="#2DD4BF" stroke-width="4"/><path d="M236 196q26 26 52 0M228 204q34 34 68 0" stroke="#2DD4BF" stroke-width="3" opacity=".7"/><path d="M100 110V80h40" stroke="#EAF0F7" stroke-width="4"/></svg></div>
+</article>
+<article class="card proj rv">
+<div class="pv"><div class="phone"><video src="assets/alphabot-line.mp4" poster="assets/alphabot-poster.webp" muted loop playsinline preload="none" aria-label="AlphaBot2 line following demo"></video></div></div>
+<div><div class="when mono">e-Yantra IIT Bombay kit</div><h3>AlphaBot2 Line Follower</h3>
+<p class="d">Programmed the AlphaBot2 robot kit from e-Yantra, IIT Bombay to follow a black line track on its own.</p>
+<ul class="chips"><li>AlphaBot2</li><li>Line following</li><li>Robotics</li><li>Sensors</li></ul></div>
+</article>
+</section>
+
+<section id="eyrc">
+<div class="tag mono ob">Competition</div>
+<h2 class="ob">e-Yantra Robotics <u>Competition</u>.</h2>
+<div class="eh rv"><span class="px"><b>Team</b> eYRC#2910</span><span class="px"><b>Role</b> Team Leader</span><span class="px"><b>Theme</b> Khoj-o-Drone (KD)</span><span class="px"><b>Stage</b> 1</span></div>
+<p class="eintro rv">I lead my team through Stage 1 of the e-Yantra Robotics Competition from IIT Bombay on the Khoj-o-Drone theme. Tasks 0, 1 and 2 are done at full marks and Task 3 is under way. Most subtasks include a recorded video, linked below.</p>
+<div class="mem rv"><span class="mono">Team members</span><ul class="chips"><li>Paras Nath Mishra</li><li>Ganesh Kumar Pandit</li><li>Anubhav Kumar</li></ul></div>
+<div class="tasks">
+<div class="card task rv"><header><div><h3>Task 0</h3><span class="st done">Completed</span></div><div class="tot">100<small> / 100</small></div></header>
+<div class="sub"><b>T0</b><div class="bar"><i style="--s:1"></i></div><span class="m">100 / 100</span><span class="vl"><span>No video</span></span></div></div>
+<div class="card task rv"><header><div><h3>Task 1</h3><span class="st done">Completed</span></div><div class="tot">100<small> / 100</small></div></header>
+<div class="sub"><b>1A</b><div class="bar"><i style="--s:1"></i></div><span class="m">20 / 20</span><span class="vl"><span>No video</span></span></div>
+<div class="sub"><b>1B</b><div class="bar"><i style="--s:1"></i></div><span class="m">40 / 40</span><span class="vl"><a href="https://youtu.be/Zn6R0FetHPc" target="_blank" rel="noopener noreferrer" aria-label="Task 1B video on YouTube">▶ Video</a></span></div>
+<div class="sub"><b>1C</b><div class="bar"><i style="--s:1"></i></div><span class="m">40 / 40</span><span class="vl"><a href="https://youtu.be/0rw63QVKc4Q" target="_blank" rel="noopener noreferrer" aria-label="Task 1C video on YouTube">▶ Video</a></span></div></div>
+<div class="card task rv"><header><div><h3>Task 2</h3><span class="st done">Completed</span></div><div class="tot">100<small> / 100</small></div></header>
+<div class="sub"><b>2A</b><div class="bar"><i style="--s:1"></i></div><span class="m">20 / 20</span><span class="vl"><a href="https://youtu.be/9x_D4Vp89pc" target="_blank" rel="noopener noreferrer" aria-label="Task 2A video on YouTube">▶ Video</a></span></div>
+<div class="sub"><b>2B</b><div class="bar"><i style="--s:1"></i></div><span class="m">40 / 40</span><span class="vl"><a href="https://youtu.be/Su5al62LkHc" target="_blank" rel="noopener noreferrer" aria-label="Task 2B video on YouTube">▶ Video</a></span></div>
+<div class="sub"><b>2C</b><div class="bar"><i style="--s:1"></i></div><span class="m">40 / 40</span><span class="vl"><a href="https://youtu.be/I8pRC1b1TbE" target="_blank" rel="noopener noreferrer" aria-label="Task 2C video on YouTube">▶ Video</a></span></div></div>
+<div class="card task rv"><header><div><h3>Task 3</h3><span class="st live">In progress</span></div><div class="tot">49.76<small> / 100</small></div></header>
+<div class="sub"><b>3A</b><div class="bar"><i style="--s:.622"></i></div><span class="m">49.76 / 80</span><span class="vl"><a href="https://youtu.be/3r6MBa2ifTU" target="_blank" rel="noopener noreferrer" aria-label="Task 3A video on YouTube">▶ Video</a></span></div>
+<div class="sub"><b>3B</b><div class="bar"><i style="--s:0"></i></div><span class="m">– / 20</span><span class="vl"><span>Viva upcoming</span></span></div></div>
+</div>
+</section>
+
+<section id="experience">
+<div class="tag mono ob">Experience</div>
+<h2 class="ob">Where I’ve <u>worked</u>.</h2>
+<div class="tl">
+<article class="now rv"><div class="when mono">Feb 2026 – Present</div><h3>Student Coordinator</h3><p>e-Yantra Lab, GEC Kishanganj. Appointed on 16 Feb 2026 to the students’ coordinator team that runs ongoing e-Yantra projects, the lab and the college’s inter-college technical events. Mentoring students in embedded systems, robotics, ROS2 and AI.</p><button class="lnk" type="button" data-lb="assets/letter-l.webp" data-alt="Student Coordinator appointment letter, GEC Kishanganj">View letter</button></article>
+<article class="rv"><div class="when mono">22 Dec 2025 – 2 Jan 2026</div><h3>Technical Intern</h3><p>BSNL, Kishanganj. Vocational training in basic telecom: GSM, TX and NGN exchange, telecom networks and optical fibre systems.</p><button class="lnk" type="button" data-lb="assets/bsnl-l.webp" data-alt="BSNL internship certificate">View certificate</button></article>
+</div>
+</section>
+
+<section id="education">
+<div class="tag mono ob">Education</div>
+<h2 class="ob">Where I <u>study</u>.</h2>
+<div class="card edu rv">
+<div class="row"><b>B.Tech, Electronics &amp; Communication<span>Government Engineering College Kishanganj</span></b><em>2028</em></div>
+<div class="row"><b>XII, BSEB<span>Samastipur College, Samastipur · 2024</span></b><em>67.4%</em></div>
+<div class="row"><b>X, CBSE<span>Progressive Central High School, Patsa · 2022</span></b><em>86.4%</em></div>
+</div>
+</section>
+
+<section id="certificates">
+<div class="tag mono ob">Certificates</div>
+<h2 class="ob">What I’ve <u>earned</u>.</h2>
+<div class="certs">
+<div class="card cert rv"><button class="tile" type="button" data-lb="assets/eyantra-l.webp" data-alt="e-Yantra eLSI Certificate of Merit"><span class="badge">98 / 100</span><img src="assets/eyantra-t.webp" alt="e-Yantra eLSI certificate preview" width="560" height="792" loading="lazy" decoding="async"></button><div class="body"><b>e-Yantra eLSI · Certificate of Merit</b><span>IIT Bombay · Basics of Embedded Systems and Robotics · Mar 2026</span><div class="acts"><button type="button" data-lb="assets/eyantra-l.webp" data-alt="e-Yantra eLSI Certificate of Merit">View</button></div></div></div>
+<div class="card cert rv"><button class="tile" type="button" data-lb="assets/nptel-l.webp" data-alt="NPTEL Embedded System Design with ARM"><span class="badge">Elite · 79%</span><img src="assets/nptel-t.webp" alt="NPTEL certificate preview" width="560" height="401" loading="lazy" decoding="async"></button><div class="body"><b>Embedded System Design with ARM</b><span>NPTEL, IIT Kharagpur · Jan–Mar 2026</span><div class="acts"><button type="button" data-lb="assets/nptel-l.webp" data-alt="NPTEL Embedded System Design with ARM">View</button></div></div></div>
+<div class="card cert rv"><button class="tile" type="button" data-lb="assets/bsnl-l.webp" data-alt="BSNL internship certificate"><span class="badge">BSNL</span><img src="assets/bsnl-t.webp" alt="BSNL certificate preview" width="560" height="793" loading="lazy" decoding="async"></button><div class="body"><b>Industrial Internship</b><span>Bharat Sanchar Nigam Limited · Dec 2025 – Jan 2026</span><div class="acts"><button type="button" data-lb="assets/bsnl-l.webp" data-alt="BSNL internship certificate">View</button></div></div></div>
+<div class="card cert rv"><button class="tile" type="button" data-lb="assets/cyber-l.webp" data-alt="Cybersecurity certificate"><span class="badge">10 hours</span><img src="assets/cyber-t.webp" alt="Cybersecurity certificate preview" width="560" height="369" loading="lazy" decoding="async"></button><div class="body"><b>Cybersecurity Fundamentals</b><span>Tech Mahindra Foundation · Skill India Digital Hub · Oct 2025</span><div class="acts"><button type="button" data-lb="assets/cyber-l.webp" data-alt="Cybersecurity certificate">View</button></div></div></div>
+<div class="card cert rv"><button class="tile" type="button" data-lb="assets/matlab-l.webp" data-alt="MATLAB workshop certificate"><span class="badge">Workshop</span><img src="assets/matlab-t.webp" alt="MATLAB workshop certificate preview" width="560" height="415" loading="lazy" decoding="async"></button><div class="body"><b>MATLAB for Engineering Applications</b><span>One-week hands-on workshop, GEC Kishanganj · 9–14 Mar 2026</span><div class="acts"><button type="button" data-lb="assets/matlab-l.webp" data-alt="MATLAB workshop certificate">View</button></div></div></div>
+<div class="card cert rv"><button class="tile" type="button" data-lb="assets/innovo-l.webp" data-alt="InnovoQuest 2.0 certificate of participation"><span class="badge">Participation</span><img src="assets/innovo-t.webp" alt="InnovoQuest 2.0 certificate preview" width="560" height="408" loading="lazy" decoding="async"></button><div class="body"><b>InnovoQuest 2.0</b><span>Startup Cell, Shri Phanishwar Nath Renu Engineering College, Araria · 8 Apr 2026</span><div class="acts"><button type="button" data-lb="assets/innovo-l.webp" data-alt="InnovoQuest 2.0 certificate of participation">View</button></div></div></div>
+</div>
+</section>
+
+<section id="contact">
+<div class="contact rv">
+<div class="tag mono ob" style="justify-content:center">Contact</div>
+<h2 class="ob">Let’s build <u>together</u>.</h2>
+<p>Open to internships in embedded systems, robotics and IoT.</p>
+<div class="info"><span id="mail">info.navneet.net@gmail.com</span><span>+91 74820 37075</span></div>
+<div class="btns"><a class="btn p" href="mailto:info.navneet.net@gmail.com">Email me</a><button class="btn" id="cp" type="button">Copy email</button><a class="btn" href="https://www.linkedin.com/in/navneet-kumar-mishra-a20626336" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="btn" href="https://www.instagram.com/itz.navneet.innet" target="_blank" rel="noopener noreferrer">Instagram</a></div>
+</div>
+</section>
+<footer>© 2026 Navneet Kumar Mishra · Samastipur, Bihar</footer>
+</div>
+</main>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Image preview"><img alt=""><button type="button" aria-label="Close">×</button></div>
+
+<script>
+(function(){
+document.documentElement.classList.add('js');
+var $=function(i){return document.getElementById(i)},R=matchMedia('(prefers-reduced-motion:reduce)').matches;
+/* menu */
+var nav=$('nav'),bg=$('bg');
+bg.onclick=function(){var o=nav.classList.toggle('open');bg.setAttribute('aria-expanded',o);bg.textContent=o?'✕':'☰'};
+$('links').addEventListener('click',function(e){if(e.target.tagName=='A'){nav.classList.remove('open');bg.textContent='☰'}});
+var L={};document.querySelectorAll('.links a').forEach(function(a){L[a.getAttribute('href').slice(1)]=a});
+var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){for(var k in L)L[k].classList.remove('on');if(L[e.target.id]&&e.target.id!='contact')L[e.target.id].classList.add('on')}})},{rootMargin:'-45% 0px -50% 0px'});
+['home','resume','about','skills','projects','eyrc','experience','education','certificates','contact'].forEach(function(i){so.observe($(i))});
+/* hero name */
+var d=0;document.querySelectorAll('#name .ln').forEach(function(l){var t=l.textContent;l.textContent='';l.setAttribute('aria-hidden','true');for(var i=0;i<t.length;i++){var s=document.createElement('i');s.textContent=t[i];s.style.animationDelay=(d+=.04)+'s';l.appendChild(s)}});
+/* role rotator */
+var roles=['Embedded Systems','Robotics','IoT Devices','ROS2 &amp; Automation'],ri=0,rs=$('role').firstElementChild;
+if(!R)setInterval(function(){if(document.hidden)return;rs.style.transform='translateY(-100%)';rs.style.opacity=0;setTimeout(function(){ri=(ri+1)%roles.length;rs.style.transition='none';rs.innerHTML=roles[ri];rs.style.transform='translateY(100%)';void rs.offsetWidth;rs.style.transition='';rs.style.transform='none';rs.style.opacity=1},450)},2600);
+/* heading words */
+document.querySelectorAll('h2').forEach(function(h){var c=0;(function walk(n){Array.prototype.slice.call(n.childNodes).forEach(function(k){if(k.nodeType==3){var f=document.createDocumentFragment();k.textContent.split(/(\s+)/).forEach(function(t){if(!t)return;if(/^\s+$/.test(t))f.appendChild(document.createTextNode(t));else{var w=document.createElement('span');w.className='w';w.textContent=t;w.style.transitionDelay=(.1+c++*.07)+'s';f.appendChild(w)}});n.replaceChild(f,k)}else if(k.nodeType==1)walk(k)})})(h)});
+document.querySelectorAll('.chips').forEach(function(u){Array.prototype.forEach.call(u.children,function(li,i){li.style.transitionDelay=(.2+i*.06)+'s'})});
+/* reveal + counters */
+function count(n){var to=+n.dataset.n,t0=performance.now();(function f(t){var p=Math.min(1,(t-t0)/1200);n.textContent=Math.round(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(t0)}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');if(e.target.id=='strip'&&!R)e.target.querySelectorAll('[data-n]').forEach(function(n){n.textContent='0';count(n)});io.unobserve(e.target)})},{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+document.querySelectorAll('.rv,.ob').forEach(function(e,i){if(e.classList.contains('rv'))e.style.transitionDelay=(i%3)*.07+'s';io.observe(e)});
+/* progress bar */
+var bar=$('bar'),H=0,tick=false;function meas(){H=document.documentElement.scrollHeight-innerHeight}
+function prog(){tick=false;bar.style.transform='scaleX('+(H>0?Math.min(1,scrollY/H):0)+')'}
+addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(prog)}},{passive:true});
+addEventListener('resize',meas);addEventListener('load',function(){meas();prog()});meas();
+/* photo: pause float offscreen */
+var pw=$('pw');new IntersectionObserver(function(es){pw.classList.toggle('off',!es[0].isIntersecting)}).observe(pw);
+/* hero arm, runs only while visible */
+var svg=$('arm'),B={x:300,y:392},L1=170,L2=140,t={x:430,y:200},c={x:430,y:200},mouse=false,on=true,run=false,n=0;
+var el={};['l1','l2','j0','j1','tg','ga','gb'].forEach(function(k){el[k]=$(k)});
+function set(e,a){for(var k in a)e.setAttribute(k,a[k])}
+svg.parentNode.addEventListener('pointermove',function(e){var r=svg.getBoundingClientRect();t.x=(e.clientX-r.left)*600/r.width;t.y=(e.clientY-r.top)*460/r.height;mouse=true},{passive:true});
+document.querySelector('.hero').addEventListener('pointermove',function(e){var r=svg.getBoundingClientRect();t.x=Math.max(0,Math.min(600,(e.clientX-r.left)*600/r.width));t.y=Math.max(0,Math.min(460,(e.clientY-r.top)*460/r.height));mouse=true},{passive:true});
+function draw(){var dx=c.x-B.x,dy=c.y-B.y,dd=Math.max(60,Math.min(Math.hypot(dx,dy),L1+L2-1)),a=Math.atan2(dy,dx),k=Math.acos(Math.max(-1,Math.min(1,(L1*L1+dd*dd-L2*L2)/(2*L1*dd)))),e={x:B.x+L1*Math.cos(a-k),y:B.y+L1*Math.sin(a-k)},h={x:B.x+dd*Math.cos(a),y:B.y+dd*Math.sin(a)},f=Math.atan2(h.y-e.y,h.x-e.x),o=.45+Math.min(.35,Math.hypot(t.x-c.x,t.y-c.y)/180);
+set(el.l1,{x1:B.x,y1:B.y,x2:e.x,y2:e.y});set(el.l2,{x1:e.x,y1:e.y,x2:h.x,y2:h.y});set(el.j0,{cx:B.x,cy:B.y});set(el.j1,{cx:e.x,cy:e.y});set(el.tg,{cx:t.x,cy:t.y});
+set(el.ga,{x1:h.x,y1:h.y,x2:h.x+28*Math.cos(f+o),y2:h.y+28*Math.sin(f+o)});set(el.gb,{x1:h.x,y1:h.y,x2:h.x+28*Math.cos(f-o),y2:h.y+28*Math.sin(f-o)})}
+function loop(){if(!on||document.hidden){run=false;return}n+=.012;if(!mouse){t.x=380+110*Math.cos(n);t.y=200+80*Math.sin(n*1.3)}c.x+=(t.x-c.x)*.12;c.y+=(t.y-c.y)*.12;draw();requestAnimationFrame(loop)}
+function go(){if(!run&&!R){run=true;requestAnimationFrame(loop)}}
+draw();
+new IntersectionObserver(function(es){on=es[0].isIntersecting;if(on)go()}).observe($('home'));
+document.addEventListener('visibilitychange',function(){if(!document.hidden&&on)go()});go();
+/* project videos: play only while visible */
+document.querySelectorAll('.phone').forEach(function(ph){var v=ph.querySelector('video'),sb=ph.querySelector('.snd'),vis=false;
+function play(){var p=v.play();if(p&&p.catch)p.catch(function(){})}
+new IntersectionObserver(function(es){vis=es[0].isIntersecting;if(vis){if(v.preload!='auto')v.preload='auto';play()}else v.pause()},{threshold:.35}).observe(ph);
+document.addEventListener('visibilitychange',function(){if(document.hidden)v.pause();else if(vis)play()});
+v.addEventListener('click',function(){v.paused?play():v.pause()});
+if(sb)sb.onclick=function(){v.muted=!v.muted;sb.textContent=v.muted?'Sound on':'Sound off';sb.setAttribute('aria-pressed',!v.muted);if(v.paused)play()}});
+/* lightbox */
+var lb=$('lb'),li=lb.querySelector('img'),last=null;
+function open(src,alt,from){li.src=src;li.alt=alt||'';lb.classList.add('open');last=from;lb.querySelector('button').focus();document.body.style.overflow='hidden'}
+function close(){lb.classList.remove('open');li.removeAttribute('src');document.body.style.overflow='';if(last)last.focus()}
+document.addEventListener('click',function(e){var b=e.target.closest('[data-lb]');if(b){open(b.dataset.lb,b.dataset.alt,b);return}if(e.target===lb||e.target.closest('#lb button'))close()});
+document.addEventListener('keydown',function(e){if(e.key=='Escape'&&lb.classList.contains('open'))close()});
+/* resume download: real download when self-hosted, viewer-confirmed save inside Claude */
+var dl=$('dl'),FN='Navneet_Kumar_Mishra_Resume.pdf';
+if(!window.claude)dl.setAttribute('download',FN);
+else dl.addEventListener('click',function(e){e.preventDefault();var href=dl.href,label=dl.textContent;
+function open(){window.open(href,'_blank','noopener')}
+Promise.resolve(window.claude.use('downloads')).then(function(d){if(!d){open();return}
+return fetch(dl.getAttribute('href')).then(function(r){return r.blob()}).then(function(b){return d.save({filename:FN,data:b})}).then(function(){dl.textContent='Saved ✓';setTimeout(function(){dl.textContent=label},2200)},function(err){if(!err||err.code!='declined')open()})}).catch(open)});
+/* copy email */
+$('cp').onclick=function(){var b=this,txt=$('mail').textContent;function done(m){b.textContent=m;setTimeout(function(){b.textContent='Copy email'},1800)}
+try{navigator.clipboard.writeText(txt).then(function(){done('Copied')},function(){sel()})}catch(x){sel()}
+function sel(){var r=document.createRange();r.selectNodeContents($('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);done('Selected')}};
+})();
+</script>
+
+</body></html>
