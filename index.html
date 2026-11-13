@@ -1,6 +1,13 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
-<title>Navneet Kumar Mishra</title>
+<title>Navneet Kumar Mishra | Embedded Systems and Robotics</title>
+<meta name="description" content="Navneet Kumar Mishra, B.Tech ECE student at GEC Kishanganj. Embedded systems, robotics, ROS2 and IoT projects, e-Yantra IIT Bombay competition results, certificates and resume.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Navneet Kumar Mishra | Embedded Systems and Robotics">
+<meta property="og:description" content="Navneet Kumar Mishra, B.Tech ECE student at GEC Kishanganj. Embedded systems, robotics, ROS2 and IoT projects, e-Yantra IIT Bombay competition results, certificates and resume.">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Navneet Kumar Mishra", "jobTitle": "B.Tech ECE student, Embedded Systems and Robotics", "email": "mailto:info.navneet.net@gmail.com", "alumniOf": {"@type": "CollegeOrUniversity", "name": "Government Engineering College Kishanganj"}, "address": {"@type": "PostalAddress", "addressLocality": "Samastipur", "addressRegion": "Bihar", "addressCountry": "IN"}, "knowsAbout": ["Embedded Systems", "Robotics", "ROS2", "IoT", "ESP32", "STM32"], "sameAs": ["https://www.linkedin.com/in/navneet-kumar-mishra-a20626336", "https://www.instagram.com/itz.navneet.innet"]}</script>
+
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,7 +17,7 @@
 :root{
   --bg:#E7EAEF;--surface:#F5F7FA;--surface-2:#EDF0F4;--ink:#0F1A2B;--mute:#556175;--line:#CBD2DC;
   --blue:#2457F5;--blue-ink:#1E4FE0;--teal:#0B9A94;--navy:#0F1A2B;--on-navy:#EAF0F7;--mid:#9FB0C4;
-  --grad:linear-gradient(90deg,#2457F5,#0EB5AC);
+  --grad:linear-gradient(90deg,#2457F5,#0EB5AC);--navbg:rgba(231,234,239,.97);--pc:36,87,245;
   --head:'Space Grotesk','Segoe UI',system-ui,sans-serif;--body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
   color-scheme:light
 }
@@ -26,7 +33,7 @@ button{font:inherit;color:inherit}
 .mono{font:500 12.5px var(--mono);letter-spacing:.08em;text-transform:uppercase}
 
 /* nav */
-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(231,234,239,.97);border-bottom:1px solid var(--line)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--navbg);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
 .logo{font:700 20px var(--head);letter-spacing:-.02em}.logo b{color:var(--blue)}
 .links{display:flex;gap:2px;align-items:center;font-size:14.5px}
@@ -213,69 +220,194 @@ footer{padding:34px 0 44px;color:var(--mute);font-size:14px;text-align:center}
   h1 i{transform:none}.hero .pill,.hero .role,.hero .btns{opacity:1}.dash{stroke-dashoffset:0}html{scroll-behavior:auto}
 }
 
-/* ---- visitor gate ---- */
-html:not(.ok) nav,html:not(.ok) main,html:not(.ok) #lb{display:none!important}
-#gate{display:none;position:fixed;inset:0;z-index:300;overflow-y:auto;-webkit-overflow-scrolling:touch;
-  background:radial-gradient(circle at 1px 1px,rgba(15,26,43,.13) 1.2px,transparent 1.7px) 0 0/26px 26px,radial-gradient(520px 380px at 12% 15%,rgba(36,87,245,.15),transparent 70%),radial-gradient(520px 380px at 90% 85%,rgba(14,181,172,.18),transparent 70%),var(--bg);
-  padding:calc(24px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
-html:not(.ok) #gate{display:flex}
-.gcard{margin:auto;width:min(100%,440px);background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:32px 28px 26px;box-shadow:0 40px 70px -40px rgba(15,26,43,.55);animation:rise .7s cubic-bezier(.2,.8,.2,1) both}
-.gcard .logo{display:inline-block;margin-bottom:18px}
-.gh{font:700 clamp(28px,7vw,34px)/1.05 var(--head);letter-spacing:-.035em;margin:0 0 8px}
-.gh u{text-decoration:none;color:var(--blue-ink)}
-.gp{color:var(--mute);font-size:16px;margin:0 0 20px}
-.gwrap{margin-bottom:4px}
-#gbtn{display:flex;justify-content:center;min-height:44px}
-.or{display:flex;align-items:center;gap:12px;color:var(--mute);font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;margin:16px 0}
-.or::before,.or::after{content:"";flex:1;height:1px;background:var(--line)}
-.gf label{display:block;font-weight:600;font-size:14.5px;margin:0 0 6px}
-.gf .fld{margin-bottom:14px}
-.gf input[type=text],.gf input[type=email]{width:100%;height:50px;padding:0 14px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);font:400 16px var(--body)}
-.gf input:focus{outline:2px solid var(--blue);outline-offset:1px;border-color:var(--blue)}
-.gf input[aria-invalid=true]{border-color:#C2410C;background:#FFF8F4}
-.gf .err{min-height:0;margin:6px 0 0;font-size:13.5px;color:#B03A0A}
-.gf .err button{margin-left:6px;border:0;background:none;padding:0;color:var(--blue-ink);font-weight:600;cursor:pointer;text-decoration:underline}
-.gf .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.gf .btn.wide{width:100%;justify-content:center;margin-top:4px}
-.gf .btn[disabled]{opacity:.6;cursor:progress;transform:none;box-shadow:none}
-.gnote{color:var(--mute);font-size:13px;line-height:1.5;margin:14px 0 0}
-.gerr{margin:12px 0 0;font-size:14px;color:#B03A0A}
-@media(prefers-reduced-motion:reduce){.gcard{animation:none}}
+/* ===== added features ===== */
+.card{position:relative}
+.card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(280px circle at var(--mx,50%) var(--my,50%),rgba(36,87,245,.11),transparent 60%);opacity:0;transition:opacity .3s}
+@media(hover:hover){.card:hover::after{opacity:1}}
+
+/* theme toggle */
+.navr{display:flex;align-items:center;gap:8px}
+.theme{width:44px;height:44px;border:1px solid var(--line);background:var(--surface);border-radius:12px;cursor:pointer;font-size:19px;line-height:1;display:grid;place-items:center;transition:background .2s,border-color .2s,transform .3s}
+.theme:hover{border-color:var(--blue);transform:rotate(-12deg)}
+.theme span{display:block;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.theme.spin span{transform:rotate(360deg)}
+html.tt *,html.tt *::before,html.tt *::after{transition:background-color .45s,color .45s,border-color .45s,fill .45s,stroke .45s!important}
+[data-theme=dark]{--bg:#0A111F;--surface:#111A2D;--surface-2:#172339;--ink:#E8EEF7;--mute:#97A5BA;--line:#25324A;--blue:#3D6BFF;--blue-ink:#7FA2FF;--teal:#2DD4BF;--navy:#18263F;--on-navy:#EAF0F7;--mid:#9FB0C4;--navbg:rgba(10,17,31,.95);--pc:127,162,255;color-scheme:dark}
+[data-theme=dark] .hero{background:radial-gradient(circle at 1px 1px,rgba(255,255,255,.08) 1.2px,transparent 1.7px) 0 0/26px 26px,radial-gradient(520px 360px at 12% 18%,rgba(61,107,255,.2),transparent 70%),radial-gradient(520px 380px at 88% 70%,rgba(14,181,172,.18),transparent 70%)}
+[data-theme=dark] .links a.hire,[data-theme=dark] .strip,[data-theme=dark] .contact{border:1px solid var(--line)}
+[data-theme=dark] .st.done{color:#2DD4BF;background:rgba(45,212,191,.14)}
+[data-theme=dark] .st.live{background:rgba(127,162,255,.16)}
+[data-theme=dark] .sk .chips li{background:rgba(127,162,255,.08);border-color:rgba(127,162,255,.3)}
+[data-theme=dark] .btn.p:hover{background:#2f5ae6}
+[data-theme=dark] #arm rect[x="230"]{fill:#2B3B5A}
+[data-theme=dark] #l1{stroke:#5F7498}
+[data-theme=dark] #j0,[data-theme=dark] #j1{fill:var(--surface)}
+[data-theme=dark] #g circle{fill:#2A3853}
+[data-theme=dark] .card::after{background:radial-gradient(280px circle at var(--mx,50%) var(--my,50%),rgba(127,162,255,.13),transparent 60%)}
+[data-theme=dark] #glow{background:radial-gradient(circle,rgba(127,162,255,.16),transparent 65%)}
+[data-theme=dark] .rprev,[data-theme=dark] .thumb,[data-theme=dark] .cert .tile{background:#fff}
+
+/* hero particle network */
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.hero>.wrap{position:relative;z-index:1}
+
+/* typewriter role */
+.role span::after{content:"";display:inline-block;width:3px;height:.85em;margin-left:4px;vertical-align:-.05em;background:var(--teal);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* cursor glow */
+#glow{position:fixed;left:0;top:0;width:380px;height:380px;border-radius:50%;pointer-events:none;z-index:40;opacity:0;transition:opacity .4s;background:radial-gradient(circle,rgba(36,87,245,.12),transparent 65%);will-change:transform}
+@media(hover:none),(pointer:coarse){#glow{display:none}}
+
+/* magnetic buttons */
+.btn{transition:transform .2s,box-shadow .2s,background .2s,color .2s,translate .3s cubic-bezier(.2,.8,.2,1)}
+
+/* skills filter */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:-8px 0 20px}
+.fl{border:1px solid var(--line);background:var(--surface);color:var(--mute);border-radius:99px;padding:8px 16px;font:500 14.5px var(--body);cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.fl:hover{color:var(--ink);border-color:var(--blue)}
+.fl.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.fl:active{transform:scale(.95)}
+.sk.pop{animation:pop .5s cubic-bezier(.3,1.3,.5,1)}
+@keyframes pop{from{opacity:0;transform:scale(.92) translateY(10px)}}
+
+/* image zoom on hover */
+.cert .tile img,.rprev img,.thumb img{transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+@media(hover:hover){.cert .tile:hover img,.thumb:hover img{transform:scale(1.06)}}
+
+/* contact phone link */
+.contact .info a{color:inherit}.contact .info a:hover{color:#7FA2FF}
+
+/* back to top */
+#top{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));width:52px;height:52px;border-radius:50%;border:0;padding:0;background:var(--navy);color:#fff;cursor:pointer;z-index:55;box-shadow:0 14px 28px -12px rgba(15,26,43,.6);opacity:0;transform:translateY(16px) scale(.8);pointer-events:none;transition:opacity .3s,transform .35s cubic-bezier(.3,1.4,.5,1),background .2s}
+#top.show{opacity:1;transform:none;pointer-events:auto}
+#top:hover{background:var(--blue)}
+#top svg{width:100%;height:100%;display:block;transform:rotate(-90deg)}
+#top .tr{fill:none;stroke:rgba(255,255,255,.18);stroke-width:3}
+#top .pg{fill:none;stroke:#5EEAD4;stroke-width:3;stroke-linecap:round;stroke-dasharray:125.66;stroke-dashoffset:125.66}
+#top .ar{fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;transform:rotate(90deg);transform-origin:24px 24px}
+[data-theme=dark] #top{border:1px solid var(--line)}
+
+/* lightbox gallery arrows */
+#lb button.nv{display:none;top:50%;margin-top:-22px;font-size:30px;line-height:1;padding:0 0 4px}
+#lb.gal button.nv{display:block}
+#lb button.nv.p{left:max(12px,env(safe-area-inset-left,0px));right:auto}
+#lb button.nv.n{right:max(12px,env(safe-area-inset-right,0px))}
+#lb img{animation:lbin .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes lbin{from{opacity:0;transform:scale(.96)}}
+
+@media(prefers-reduced-motion:reduce){
+  .role span::after,#lb img,.sk.pop{animation:none!important}
+  #glow{display:none}.hero canvas{display:none}
+}
+
+/* ===== v2 ===== */
+.skip{position:absolute;left:12px;top:-60px;z-index:400;background:var(--navy);color:#fff;padding:10px 16px;border-radius:10px;font-weight:600;transition:top .2s}
+.skip:focus{top:calc(10px + env(safe-area-inset-top,0px))}
+nav{transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 12px 30px -22px rgba(15,26,43,.55)}
+
+/* tech ticker */
+.marq{margin-top:56px;border-block:1px solid var(--line);overflow:hidden;background:var(--surface);-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mt{display:flex;width:max-content;animation:mq 46s linear infinite}
+.marq:hover .mt{animation-play-state:paused}
+.mt span{display:flex;align-items:center;gap:26px;padding:15px 13px 15px 0;font:500 14px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);white-space:nowrap}
+.mt span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--grad)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* eYRC overall */
+.ov{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px 28px;align-items:center;padding:22px 26px;margin:0 0 16px}
+.ov .mono{color:var(--teal);display:block;margin-bottom:4px}
+.ov .big{font:700 clamp(34px,6vw,52px)/1 var(--head);letter-spacing:-.03em;white-space:nowrap}
+.ov .big small{font:500 16px var(--body);color:var(--mute);letter-spacing:0}
+.ov .bar{height:12px}
+.ov p{grid-column:2;margin:6px 0 0;color:var(--mute);font-size:14.5px}
+@media(max-width:620px){.ov{grid-template-columns:1fr}.ov p{grid-column:1}}
+
+/* timeline fill follows scroll */
+.tl::after{transform:scaleY(var(--tp,1));transform-origin:top}
+
+/* contact clock */
+.clk{display:inline-flex;align-items:center;gap:10px;margin:0 0 24px!important;color:var(--mid);font:500 13px var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.clk i{width:8px;height:8px;border-radius:50%;background:#2DD4BF;box-shadow:0 0 0 4px rgba(45,212,191,.2)}
+
+/* command palette */
+.kbd{display:none;height:44px;padding:0 12px;border:1px solid var(--line);background:var(--surface);color:var(--mute);border-radius:12px;font:500 12.5px var(--mono);letter-spacing:.04em;cursor:pointer;transition:border-color .2s,color .2s}
+.kbd:hover{color:var(--ink);border-color:var(--blue)}
+@media(min-width:1280px) and (hover:hover){.kbd{display:block}}
+#cmd{position:fixed;inset:0;z-index:120;background:rgba(10,16,28,.6);display:flex;align-items:flex-start;justify-content:center;padding:calc(12vh + env(safe-area-inset-top,0px)) 16px 16px}
+#cmd[hidden]{display:none}
+.cbox{width:min(560px,100%);background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:0 40px 80px -30px rgba(0,0,0,.6);overflow:hidden;animation:lbin .25s cubic-bezier(.2,.8,.2,1)}
+#cq{width:100%;height:56px;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);padding:0 20px;font:400 17px var(--body)}
+#cq:focus{outline:none}
+#cl{list-style:none;margin:0;padding:8px;max-height:min(46vh,360px);overflow:auto}
+#cl li{display:flex;justify-content:space-between;gap:12px;padding:11px 14px;border-radius:10px;cursor:pointer;font-weight:500}
+#cl li small{color:var(--mute);font:500 11.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;align-self:center}
+#cl li[aria-selected=true]{background:rgba(36,87,245,.12);color:var(--blue-ink)}
+#cl .none{color:var(--mute);cursor:default}
+.chint{margin:0;padding:10px 20px;border-top:1px solid var(--line);color:var(--mute);font-size:11.5px!important}
+
+/* toast */
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--navy);color:#fff;padding:11px 20px;border-radius:99px;font-weight:600;font-size:14.5px;z-index:130;opacity:0;pointer-events:none;transition:opacity .25s,transform .35s cubic-bezier(.3,1.4,.5,1);box-shadow:0 14px 30px -14px rgba(0,0,0,.6)}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){.mt{animation:none}.cbox{animation:none}}
+/* ===== v3 features (look unchanged) ===== */
+.sk .chips li{cursor:pointer}
+.chips li.hit{background:var(--teal)!important;border-color:var(--teal)!important;color:#fff!important}
+.sk .chips li.act{background:var(--blue)!important;border-color:var(--blue)!important;color:#fff!important}
+.proj.match{border-color:var(--teal);box-shadow:0 0 0 3px rgba(11,154,148,.25)}
+#lb{overflow:hidden}
+#lb img{cursor:zoom-in;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+#lb img.z{transform:scale(2.3);cursor:zoom-out}
+@media print{
+  nav,#glow,#top,#toast,#cmd,#lb,.hero canvas,.marq,.skip,.filters,.stage,.snd,.phone video,.btns,.burger{display:none!important}
+  html,body{background:#fff!important;color:#000!important}
+  .js .rv,.js .w,.js .tag,.js .rv .chips li,h1 i,.hero .pill,.hero .role,.hero .btns{opacity:1!important;transform:none!important;animation:none!important}
+  .js .rv .bar i{transform:scaleX(var(--s))!important}
+  section{padding-top:28px;content-visibility:visible}
+  .card,.tl article{break-inside:avoid;box-shadow:none!important}
+}
+/* ===== live PDF resume ===== */
+.rprev{position:relative;aspect-ratio:1/1.414;display:block}
+.rprev canvas{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:0;transition:opacity .5s}
+.rprev.rdy canvas{opacity:1}
+.rprev.ld{background:linear-gradient(90deg,#eef1f5 25%,#fff 50%,#eef1f5 75%) 0 0/200% 100%;animation:shm 1.3s linear infinite}
+@keyframes shm{to{background-position:-200% 0}}
+.rprev object{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none}
+#pdfv{position:fixed;inset:0;z-index:110;background:rgba(10,16,28,.88);display:flex;padding:calc(12px + env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+#pdfv[hidden]{display:none}
+.pbox{margin:auto;width:min(960px,100%);height:100%;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;animation:lbin .3s cubic-bezier(.2,.8,.2,1)}
+.pbar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 12px 10px 16px;border-bottom:1px solid var(--line)}
+.pbar b{font:600 15px var(--head);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.pact{display:flex;gap:8px;align-items:center;flex-shrink:0}
+.pact button,.pact a{height:38px;min-width:38px;padding:0 12px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);border-radius:10px;font:600 14px var(--body);cursor:pointer;display:grid;place-items:center;transition:border-color .2s,background .2s}
+.pact button:hover,.pact a:hover{border-color:var(--blue)}
+.pact .pdl{background:var(--blue);border-color:var(--blue);color:#fff}
+.pbody{flex:1;overflow:auto;background:var(--surface-2);padding:16px;-webkit-overflow-scrolling:touch}
+.pbody canvas{display:block;margin:0 auto 14px;background:#fff;box-shadow:0 14px 34px -18px rgba(15,26,43,.6)}
+.pbody .pmsg{color:var(--mute);text-align:center;padding:40px 0}
+@media(max-width:480px){.pbar b{display:none}.pbar{justify-content:flex-end}}
+@media print{#pdfv{display:none!important}}
 </style>
-<script>try{if(JSON.parse(localStorage.getItem('nkm_visitor_v1')||'null'))document.documentElement.classList.add('ok')}catch(e){}</script>
+<meta name="theme-color" content="#E7EAEF" id="tc">
+<script>try{if(localStorage.getItem('nkm_theme')==='dark'){document.documentElement.setAttribute('data-theme','dark');document.getElementById('tc')&&0}}catch(e){}</script>
 <script defer src="/_vercel/insights/script.js"></script>
 
 
-<div id="gate" role="dialog" aria-modal="true" aria-labelledby="gt">
-<div class="gcard">
-<span class="logo">navneet<b>.</b>dev</span>
-<h1 class="gh" id="gt">Before you <u>enter</u></h1>
-<p class="gp">Tell me who you are to view my portfolio. It takes 10 seconds.</p>
-<div class="gwrap" id="gwrap" hidden><div id="gbtn"></div><div class="or"><span>or</span></div></div>
-<form class="gf" id="gf" novalidate autocomplete="on">
-<div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="botcheck" id="hp" tabindex="-1" autocomplete="off"></label></div>
-<div class="fld"><label for="g-name">Your name</label><input type="text" id="g-name" name="name" autocomplete="name" placeholder="e.g. Anita Sharma" maxlength="80" aria-describedby="e-name"><p class="err" id="e-name" role="alert"></p></div>
-<div class="fld"><label for="g-mail">Your email</label><input type="email" id="g-mail" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="254" aria-describedby="e-mail"><p class="err" id="e-mail" role="alert"></p></div>
-<button class="btn p wide" id="gs" type="submit">View portfolio</button>
-<p class="gerr" id="gerr" role="alert"></p>
-<p class="gnote">By continuing, you agree that Navneet Mishra may store your name and email address</p>
-</form>
-<noscript><p class="gerr">Please turn on JavaScript to view this portfolio.</p></noscript>
-</div></div>
-
+<a class="skip" href="#main">Skip to content</a>
 <nav id="nav"><div class="wrap">
 <a class="logo" href="#home">navneet<b>.</b>innet</a>
-<button class="burger" id="bg" aria-label="Menu" aria-expanded="false">☰</button>
+<div class="navr"><button class="kbd" id="kb" type="button" aria-label="Open quick navigation">Ctrl K</button><button class="theme" id="th" type="button" aria-label="Switch to dark theme" aria-pressed="false"><span aria-hidden="true">☾</span></button><button class="burger" id="bg" aria-label="Menu" aria-expanded="false">☰</button></div>
 <div class="links" id="links"><a href="#home">Home</a><a href="#resume">Resume</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#eyrc">eYRC</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#certificates">Certificates</a><a class="hire" href="#contact">Contact</a></div>
 </div><div id="bar"></div></nav>
 
-<main>
-<header class="hero" id="home"><div class="wrap">
+<main id="main">
+<header class="hero" id="home"><canvas id="net" aria-hidden="true"></canvas><div class="wrap">
 <div class="grid">
 <div>
 <span class="pill"><i></i>Open to internships</span>
 <h1 id="name" aria-label="Navneet Kumar Mishra"><span class="ln">Navneet</span><span class="ln">Kumar</span><span class="ln g">Mishra</span></h1>
-<div class="role" id="role"><span>Embedded Systems</span></div>
+<div class="role" id="role" aria-label="Embedded Systems, Robotics, IoT Devices, ROS2 and Automation"><span aria-hidden="true">Embedded Systems</span></div>
 <div class="btns"><a class="btn p" href="#projects">View projects</a><a class="btn" href="#resume">Resume</a><a class="btn" href="#contact">Contact me</a></div>
 </div>
 <div class="stage"><span class="live mono">Move your cursor</span>
@@ -297,16 +429,17 @@ html:not(.ok) #gate{display:flex}
 <div><b data-n="6">6</b><span>Certificates</span></div>
 <div><b data-n="300">300</b><span>eYRC marks, Tasks 0–2</span></div>
 </div></div></header>
+<div class="marq" aria-hidden="true"><div class="mt"><span>ESP32</span><span>STM32</span><span>ROS2</span><span>Arduino</span><span>Raspberry Pi</span><span>Embedded C</span><span>Python</span><span>C++</span><span>MQTT</span><span>I2C</span><span>SPI</span><span>UART</span><span>SOLIDWORKS</span><span>MATLAB</span><span>PlatformIO</span><span>ESP32</span><span>STM32</span><span>ROS2</span><span>Arduino</span><span>Raspberry Pi</span><span>Embedded C</span><span>Python</span><span>C++</span><span>MQTT</span><span>I2C</span><span>SPI</span><span>UART</span><span>SOLIDWORKS</span><span>MATLAB</span><span>PlatformIO</span></div></div>
 
 <div class="wrap">
 <section id="resume">
 <div class="tag mono ob">Resume</div>
 <h2 class="ob">Take my <u>resume</u>.</h2>
 <div class="card resume rv">
-<button class="rprev" type="button" data-lb="assets/resume-l.webp" data-alt="Resume of Navneet Kumar Mishra"><img src="assets/resume-t.webp" alt="Resume preview" width="360" height="509" loading="lazy" decoding="async"></button>
+<button class="rprev ld" type="button" data-pdf aria-label="Open resume preview"><canvas id="rc" aria-hidden="true"></canvas></button>
 <div><p class="rd">Education, skills, projects, certifications and experience on one A4 page.</p>
-<p class="rm mono">PDF · 1 page · Updated 25 Aug 2026</p>
-<div class="btns"><a class="btn p" id="dl" href="assets/Navneet_Kumar_Mishra_Resume.pdf" target="_blank" rel="noopener">Download PDF</a><button class="btn" type="button" data-lb="assets/resume-l.webp" data-alt="Resume of Navneet Kumar Mishra">Preview</button></div></div>
+<p class="rm mono" id="rmeta">PDF · 1 page · Updated 25 Aug 2026</p>
+<div class="btns"><a class="btn p" id="dl" href="assets/Navneet_Kumar_Mishra_Resume.pdf" target="_blank" rel="noopener">Download PDF</a><button class="btn" id="rpv" type="button" data-pdf>Preview</button></div></div>
 </div>
 </section>
 
@@ -324,13 +457,14 @@ html:not(.ok) #gate{display:flex}
 <section id="skills">
 <div class="tag mono ob">Skills</div>
 <h2 class="ob">My <u>toolkit</u>.</h2>
+<div class="filters rv" role="group" aria-label="Filter skills"><button class="fl on" type="button" data-f="all" aria-pressed="true">All</button><button class="fl" type="button" data-f="Programming" aria-pressed="false">Programming</button><button class="fl" type="button" data-f="Embedded" aria-pressed="false">Embedded</button><button class="fl" type="button" data-f="Protocols" aria-pressed="false">Protocols</button><button class="fl" type="button" data-f="Robotics" aria-pressed="false">Robotics</button><button class="fl" type="button" data-f="Design" aria-pressed="false">Design</button><button class="fl" type="button" data-f="Tools" aria-pressed="false">Tools</button></div>
 <div class="grid3">
-<div class="card sk rv"><h3>Programming</h3><ul class="chips"><li>C</li><li>C++</li><li>Python</li></ul></div>
-<div class="card sk rv"><h3>Embedded</h3><ul class="chips"><li>Embedded C</li><li>Arduino</li><li>ESP32</li><li>STM32</li><li>Raspberry Pi</li></ul></div>
-<div class="card sk rv"><h3>Protocols</h3><ul class="chips"><li>UART</li><li>I2C</li><li>SPI</li><li>MQTT</li></ul></div>
-<div class="card sk rv"><h3>Robotics</h3><ul class="chips"><li>ROS2</li><li>IoT</li><li>Sensors</li><li>Actuators</li></ul></div>
-<div class="card sk rv"><h3>Design</h3><ul class="chips"><li>SOLIDWORKS</li><li>MATLAB</li><li>3D Printing</li><li>Proteus</li></ul></div>
-<div class="card sk rv"><h3>Tools</h3><ul class="chips"><li>Git</li><li>GitHub</li><li>PlatformIO</li><li>STM32CubeIDE</li><li>VS Code</li></ul></div>
+<div class="card sk rv" data-c="Programming"><h3>Programming</h3><ul class="chips"><li>C</li><li>C++</li><li>Python</li></ul></div>
+<div class="card sk rv" data-c="Embedded"><h3>Embedded</h3><ul class="chips"><li>Embedded C</li><li>Arduino</li><li>ESP32</li><li>STM32</li><li>Raspberry Pi</li></ul></div>
+<div class="card sk rv" data-c="Protocols"><h3>Protocols</h3><ul class="chips"><li>UART</li><li>I2C</li><li>SPI</li><li>MQTT</li></ul></div>
+<div class="card sk rv" data-c="Robotics"><h3>Robotics</h3><ul class="chips"><li>ROS2</li><li>IoT</li><li>Sensors</li><li>Actuators</li></ul></div>
+<div class="card sk rv" data-c="Design"><h3>Design</h3><ul class="chips"><li>SOLIDWORKS</li><li>MATLAB</li><li>3D Printing</li><li>Proteus</li></ul></div>
+<div class="card sk rv" data-c="Tools"><h3>Tools</h3><ul class="chips"><li>Git</li><li>GitHub</li><li>PlatformIO</li><li>STM32CubeIDE</li><li>VS Code</li></ul></div>
 </div>
 </section>
 
@@ -365,6 +499,7 @@ html:not(.ok) #gate{display:flex}
 <div class="eh rv"><span class="px"><b>Team</b> eYRC#2910</span><span class="px"><b>Role</b> Team Leader</span><span class="px"><b>Theme</b> Khoj-o-Drone (KD)</span><span class="px"><b>Stage</b> 1</span></div>
 <p class="eintro rv">I lead my team through Stage 1 of the e-Yantra Robotics Competition from IIT Bombay on the Khoj-o-Drone theme. Tasks 0, 1 and 2 are done at full marks and Task 3 is under way. Most subtasks include a recorded video, linked below.</p>
 <div class="mem rv"><span class="mono">Team members</span><ul class="chips"><li>Paras Nath Mishra</li><li>Ganesh Kumar Pandit</li><li>Anubhav Kumar</li></ul></div>
+<div class="card ov rv"><div><span class="mono">Overall, Stage 1</span><b class="big"><span data-f="349.76">349.76</span><small> / 400</small></b></div><div class="bar" role="img" aria-label="349.76 of 400 marks"><i style="--s:.8744"></i></div><p>Tasks 0 to 2 at full marks. Task 3A scored 49.76 out of 80, and the 3B viva is still to come.</p></div>
 <div class="tasks">
 <div class="card task rv"><header><div><h3>Task 0</h3><span class="st done">Completed</span></div><div class="tot">100<small> / 100</small></div></header>
 <div class="sub"><b>T0</b><div class="bar"><i style="--s:1"></i></div><span class="m">100 / 100</span><span class="vl"><span>No video</span></span></div></div>
@@ -419,15 +554,20 @@ html:not(.ok) #gate{display:flex}
 <div class="tag mono ob" style="justify-content:center">Contact</div>
 <h2 class="ob">Let’s build <u>together</u>.</h2>
 <p>Open to internships in embedded systems, robotics and IoT.</p>
-<div class="info"><span id="mail">info.navneet.net@gmail.com</span><span>+91 74820 37075</span></div>
-<div class="btns"><a class="btn p" href="mailto:info.navneet.net@gmail.com">Email me</a><button class="btn" id="cp" type="button">Copy email</button><a class="btn" href="https://www.linkedin.com/in/navneet-kumar-mishra-a20626336" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="btn" href="https://www.instagram.com/itz.navneet.innet" target="_blank" rel="noopener noreferrer">Instagram</a></div>
+<p class="clk"><i></i>Samastipur, <span id="clk"></span></p>
+<div class="info"><span id="mail">info.navneet.net@gmail.com</span><a href="tel:+917482037075">+91 74820 37075</a></div>
+<div class="btns"><a class="btn p" href="mailto:info.navneet.net@gmail.com">Email me</a><button class="btn" id="cp" type="button">Copy email</button><a class="btn" href="https://www.linkedin.com/in/navneet-kumar-mishra-a20626336" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="btn" href="https://www.instagram.com/itz.navneet.innet" target="_blank" rel="noopener noreferrer">Instagram</a><button class="btn" id="vc" type="button">Save contact</button><button class="btn" id="sh" type="button">Share</button></div>
 </div>
 </section>
 <footer>© 2026 Navneet Kumar Mishra · Samastipur, Bihar</footer>
 </div>
 </main>
 
-<div id="lb" role="dialog" aria-modal="true" aria-label="Image preview"><img alt=""><button type="button" aria-label="Close">×</button></div>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Image preview"><img alt=""><button type="button" aria-label="Close">×</button><button type="button" class="nv p" id="lbp" aria-label="Previous">‹</button><button type="button" class="nv n" id="lbn" aria-label="Next">›</button></div>
+<div id="pdfv" hidden><div class="pbox" role="dialog" aria-modal="true" aria-label="Resume preview"><div class="pbar"><b>Navneet_Kumar_Mishra_Resume.pdf</b><span class="pact"><button id="pz-" type="button" aria-label="Zoom out">−</button><button id="pz+" type="button" aria-label="Zoom in">+</button><a class="pdl" href="assets/Navneet_Kumar_Mishra_Resume.pdf" download="Navneet_Kumar_Mishra_Resume.pdf">Download</a><button id="pcl" type="button" aria-label="Close">×</button></span></div><div class="pbody" id="pbody"></div></div></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="glow" aria-hidden="true"></div>
+<button id="top" type="button" aria-label="Back to top"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20" class="tr"/><circle cx="24" cy="24" r="20" class="pg" id="pg"/><path d="M17 27l7-7 7 7" class="ar"/></svg></button>
 
 <script>
 (function(){
@@ -442,9 +582,6 @@ var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInter
 ['home','resume','about','skills','projects','eyrc','experience','education','certificates','contact'].forEach(function(i){so.observe($(i))});
 /* hero name */
 var d=0;document.querySelectorAll('#name .ln').forEach(function(l){var t=l.textContent;l.textContent='';l.setAttribute('aria-hidden','true');for(var i=0;i<t.length;i++){var s=document.createElement('i');s.textContent=t[i];s.style.animationDelay=(d+=.04)+'s';l.appendChild(s)}});
-/* role rotator */
-var roles=['Embedded Systems','Robotics','IoT Devices','ROS2 &amp; Automation'],ri=0,rs=$('role').firstElementChild;
-if(!R)setInterval(function(){if(document.hidden)return;rs.style.transform='translateY(-100%)';rs.style.opacity=0;setTimeout(function(){ri=(ri+1)%roles.length;rs.style.transition='none';rs.innerHTML=roles[ri];rs.style.transform='translateY(100%)';void rs.offsetWidth;rs.style.transition='';rs.style.transform='none';rs.style.opacity=1},450)},2600);
 /* heading words */
 document.querySelectorAll('h2').forEach(function(h){var c=0;(function walk(n){Array.prototype.slice.call(n.childNodes).forEach(function(k){if(k.nodeType==3){var f=document.createDocumentFragment();k.textContent.split(/(\s+)/).forEach(function(t){if(!t)return;if(/^\s+$/.test(t))f.appendChild(document.createTextNode(t));else{var w=document.createElement('span');w.className='w';w.textContent=t;w.style.transitionDelay=(.1+c++*.07)+'s';f.appendChild(w)}});n.replaceChild(f,k)}else if(k.nodeType==1)walk(k)})})(h)});
 document.querySelectorAll('.chips').forEach(function(u){Array.prototype.forEach.call(u.children,function(li,i){li.style.transitionDelay=(.2+i*.06)+'s'})});
@@ -465,7 +602,7 @@ var el={};['l1','l2','j0','j1','tg','ga','gb'].forEach(function(k){el[k]=$(k)});
 function set(e,a){for(var k in a)e.setAttribute(k,a[k])}
 svg.parentNode.addEventListener('pointermove',function(e){var r=svg.getBoundingClientRect();t.x=(e.clientX-r.left)*600/r.width;t.y=(e.clientY-r.top)*460/r.height;mouse=true},{passive:true});
 document.querySelector('.hero').addEventListener('pointermove',function(e){var r=svg.getBoundingClientRect();t.x=Math.max(0,Math.min(600,(e.clientX-r.left)*600/r.width));t.y=Math.max(0,Math.min(460,(e.clientY-r.top)*460/r.height));mouse=true},{passive:true});
-function draw(){var dx=c.x-B.x,dy=c.y-B.y,dd=Math.max(60,Math.min(Math.hypot(dx,dy),L1+L2-1)),a=Math.atan2(dy,dx),k=Math.acos(Math.max(-1,Math.min(1,(L1*L1+dd*dd-L2*L2)/(2*L1*dd)))),e={x:B.x+L1*Math.cos(a-k),y:B.y+L1*Math.sin(a-k)},h={x:B.x+dd*Math.cos(a),y:B.y+dd*Math.sin(a)},f=Math.atan2(h.y-e.y,h.x-e.x),o=.45+Math.min(.35,Math.hypot(t.x-c.x,t.y-c.y)/180);
+function draw(){var dx=c.x-B.x,dy=c.y-B.y,dd=Math.max(60,Math.min(Math.hypot(dx,dy),L1+L2-1)),a=Math.atan2(dy,dx),k=Math.acos(Math.max(-1,Math.min(1,(L1*L1+dd*dd-L2*L2)/(2*L1*dd)))),e={x:B.x+L1*Math.cos(a-k),y:B.y+L1*Math.sin(a-k)},h={x:B.x+dd*Math.cos(a),y:B.y+dd*Math.sin(a)},f=Math.atan2(h.y-e.y,h.x-e.x),o=(window.__g?.1:.45)+Math.min(window.__g?0:.35,Math.hypot(t.x-c.x,t.y-c.y)/180);
 set(el.l1,{x1:B.x,y1:B.y,x2:e.x,y2:e.y});set(el.l2,{x1:e.x,y1:e.y,x2:h.x,y2:h.y});set(el.j0,{cx:B.x,cy:B.y});set(el.j1,{cx:e.x,cy:e.y});set(el.tg,{cx:t.x,cy:t.y});
 set(el.ga,{x1:h.x,y1:h.y,x2:h.x+28*Math.cos(f+o),y2:h.y+28*Math.sin(f+o)});set(el.gb,{x1:h.x,y1:h.y,x2:h.x+28*Math.cos(f-o),y2:h.y+28*Math.sin(f-o)})}
 function loop(){if(!on||document.hidden){run=false;return}n+=.012;if(!mouse){t.x=380+110*Math.cos(n);t.y=200+80*Math.sin(n*1.3)}c.x+=(t.x-c.x)*.12;c.y+=(t.y-c.y)*.12;draw();requestAnimationFrame(loop)}
@@ -499,81 +636,292 @@ try{navigator.clipboard.writeText(txt).then(function(){done('Copied')},function(
 function sel(){var r=document.createRange();r.selectNodeContents($('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);done('Selected')}};
 })();
 </script>
-<script src="config.js"></script>
 <script>
 (function(){
-var C=window.PORTFOLIO_CONFIG||{},K='nkm_visitor_v1';
-var gate=document.getElementById('gate');if(!gate)return;
-function $(i){return document.getElementById(i)}
-var form=$('gf'),nm=$('g-name'),ml=$('g-mail'),en=$('e-name'),em=$('e-mail'),btn=$('gs'),ge=$('gerr');
-var DISPOSABLE=/^(mailinator\.com|10minutemail\.com|guerrillamail\.(com|net|org)|tempmail\.(com|net)|temp-mail\.org|yopmail\.com|trashmail\.com|sharklasers\.com|getnada\.com|dispostable\.com|maildrop\.cc|throwawaymail\.com|fakeinbox\.com|mailnesia\.com|mintemail\.com)$/i;
-var TYPO={'gmial.com':'gmail.com','gmal.com':'gmail.com','gmai.com':'gmail.com','gamil.com':'gmail.com','gnail.com':'gmail.com','gmaill.com':'gmail.com','gmail.con':'gmail.com','gmail.co':'gmail.com','gmail.cm':'gmail.com','yaho.com':'yahoo.com','yahooo.com':'yahoo.com','yahoo.con':'yahoo.com','hotmial.com':'hotmail.com','hotmal.com':'hotmail.com','hotmail.con':'hotmail.com','outlok.com':'outlook.com','outlook.con':'outlook.com'};
-var EMAIL=/^[A-Za-z0-9](?:[A-Za-z0-9._%+\-]{0,62}[A-Za-z0-9])?@(?:[A-Za-z0-9](?:[A-Za-z0-9\-]{0,61}[A-Za-z0-9])?\.)+[A-Za-z]{2,24}$/;
+var $=function(i){return document.getElementById(i)},
+R=matchMedia('(prefers-reduced-motion:reduce)').matches,
+fine=matchMedia('(hover:hover) and (pointer:fine)').matches,
+root=document.documentElement;
 
-function cleanName(n){return n.trim().replace(/\s+/g,' ')}
-function checkName(raw){var n=cleanName(raw);
-  if(n.length<2)return 'Please enter your name.';
-  if(n.length>60)return 'That name is too long.';
-  if(!/^\p{L}[\p{L}\p{M} .'’\-]*$/u.test(n))return 'Use letters only, without numbers or symbols.';
-  var l=n.replace(/[^\p{L}]/gu,'').toLowerCase();
-  if(l.length<2||/^(.)\1+$/u.test(l)||/(.)\1{3,}/u.test(l))return 'Please enter your real name.';
-  return ''}
-function checkMail(raw){var e=raw.trim();
-  if(!e)return {msg:'Please enter your email.'};
-  if(e.length>254||/\.\./.test(e)||!EMAIL.test(e))return {msg:'Enter a valid email like name@example.com.'};
-  var d=e.split('@')[1].toLowerCase();
-  if(DISPOSABLE.test(d))return {msg:'Please use a permanent email, not a temporary one.'};
-  if(TYPO[d])return {msg:'Did you mean ',fix:e.split('@')[0]+'@'+TYPO[d]};
-  return {msg:''}}
+/* ---------- theme toggle ---------- */
+var th=$('th'),tc=$('tc');
+function paint(){var d=root.getAttribute('data-theme')=='dark';
+  th.firstElementChild.textContent=d?'☀':'☾';
+  th.setAttribute('aria-pressed',d);th.setAttribute('aria-label',d?'Switch to light theme':'Switch to dark theme');
+  if(tc)tc.content=d?'#0A111F':'#E7EAEF'}
+paint();
+th.onclick=function(){var d=root.getAttribute('data-theme')=='dark';
+  root.classList.add('tt');setTimeout(function(){root.classList.remove('tt')},520);
+  if(d)root.removeAttribute('data-theme');else root.setAttribute('data-theme','dark');
+  try{localStorage.setItem('nkm_theme',d?'light':'dark')}catch(e){}
+  if(!R){th.classList.add('spin');setTimeout(function(){th.classList.remove('spin')},520)}
+  paint();window.dispatchEvent(new Event('themechange'))};
 
-function setErr(inp,box,msg,fix){box.textContent='';inp.setAttribute('aria-invalid',msg?'true':'false');
-  if(!msg)return;box.appendChild(document.createTextNode(msg));
-  if(fix){var b=document.createElement('button');b.type='button';b.textContent=fix+'?';b.addEventListener('mousedown',function(ev){ev.preventDefault()});b.onclick=function(){ml.value=fix;setErr(ml,em,'');ml.focus()};box.appendChild(b)}}
+/* ---------- typewriter role ---------- */
+(function(){var rs=$('role').firstElementChild,roles=['Embedded Systems','Robotics','IoT Devices','ROS2 & Automation'],i=0,j=roles[0].length,del=false;
+  rs.textContent=roles[0];if(R)return;
+  function tick(){if(document.hidden){setTimeout(tick,600);return}
+    var w=roles[i];
+    if(!del){if(j<w.length){j++;rs.textContent=w.slice(0,j);setTimeout(tick,75);return}del=true;setTimeout(tick,1700);return}
+    if(j>0){j--;rs.textContent=w.slice(0,j);setTimeout(tick,38);return}
+    del=false;i=(i+1)%roles.length;setTimeout(tick,320)}
+  setTimeout(tick,2200)})();
 
-function unlock(v){try{localStorage.setItem(K,JSON.stringify({name:v.name,email:v.email,via:v.via,at:Date.now()}))}catch(e){}
-  document.documentElement.classList.add('ok');window.scrollTo(0,0);window.dispatchEvent(new Event('resize'))}
+/* ---------- hero particle network ---------- */
+(function(){var cv=$('net');if(!cv||R)return;
+  var ctx=cv.getContext('2d'),hero=$('home'),W=0,H=0,P=[],mx=-999,my=-999,vis=true,run=false,col='36,87,245';
+  function color(){col=(getComputedStyle(root).getPropertyValue('--pc')||'').trim()||col}
+  function size(){var r=hero.getBoundingClientRect(),d=Math.min(2,devicePixelRatio||1);W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;ctx.setTransform(d,0,0,d,0,0);
+    var n=Math.min(innerWidth<700?32:64,Math.round(W*H/16000));P=[];
+    for(var k=0;k<n;k++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.38,vy:(Math.random()-.5)*.38,r:1.2+Math.random()*1.5})}
+  function frame(){if(!vis||document.hidden){run=false;return}
+    ctx.clearRect(0,0,W,H);var D=125,k,m,p,q,dx,dy,d;
+    for(k=0;k<P.length;k++){p=P[k];p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+      dx=mx-p.x;dy=my-p.y;d=Math.hypot(dx,dy);
+      if(d<170&&d>1){p.x+=dx/d*.35;p.y+=dy/d*.35;ctx.strokeStyle='rgba('+col+','+(1-d/170)*.5+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(mx,my);ctx.stroke()}
+      ctx.fillStyle='rgba('+col+',.55)';ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.283);ctx.fill();
+      for(m=k+1;m<P.length;m++){q=P[m];dx=p.x-q.x;dy=p.y-q.y;d=dx*dx+dy*dy;
+        if(d<D*D){ctx.strokeStyle='rgba('+col+','+(1-Math.sqrt(d)/D)*.3+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.stroke()}}}
+    requestAnimationFrame(frame)}
+  function go(){if(!run){run=true;requestAnimationFrame(frame)}}
+  hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top},{passive:true});
+  hero.addEventListener('pointerleave',function(){mx=my=-999});
+  new IntersectionObserver(function(es){vis=es[0].isIntersecting;if(vis)go()}).observe(hero);
+  document.addEventListener('visibilitychange',function(){if(!document.hidden&&vis)go()});
+  if(window.ResizeObserver){var t;new ResizeObserver(function(){clearTimeout(t);t=setTimeout(size,120)}).observe(hero)}else addEventListener('resize',size);
+  addEventListener('themechange',color);color();size();go()})();
 
-function cf(){try{var f=(new URLSearchParams(location.search).get('from')||sessionStorage.getItem('nkm_from')||'').replace(/[^\w .\-]/g,'').slice(0,40);if(f)sessionStorage.setItem('nkm_from',f);return f||'direct'}catch(e){return 'direct'}}
-cf();
-function payload(v,ev){return {name:v.name,email:v.email,via:v.via||'',event:ev,came_from:cf(),page:location.href,referrer:document.referrer||'direct',
-  timezone:(Intl.DateTimeFormat().resolvedOptions()||{}).timeZone||'',language:navigator.language||'',screen:screen.width+'x'+screen.height,device:navigator.userAgent}}
-function send(v,ev){var jobs=[],pl=payload(v,ev);
-  if(C.notifyEndpoint)jobs.push(fetch(C.notifyEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,body:JSON.stringify(pl)}).then(function(r){if(!r.ok)throw new Error('notify '+r.status)}));
-  if(C.web3formsKey){var w=Object.assign({access_key:C.web3formsKey,subject:(ev=='resume_download'?'Resume downloaded by ':'New portfolio visitor: ')+v.name,from_name:'Portfolio visitor gate',visited_at:new Date().toString(),botcheck:''},pl);
-    jobs.push(fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},keepalive:true,body:JSON.stringify(w)}).then(function(r){return r.json()}).then(function(j){if(!j||!j.success)throw new Error('w3f')}))}
-  if(!jobs.length){console.warn('Visitor gate: no notifyEndpoint or web3formsKey set in config.js, so no notification is sent.');return Promise.resolve()}
-  return Promise.all(jobs.map(function(p){return p.then(function(){return 1},function(){return 0})})).then(function(a){if(a.indexOf(1)<0)throw new Error('send failed')})}
-function notify(v){return send(v,'visit')}
+/* ---------- cursor glow ---------- */
+if(fine&&!R){var g=$('glow'),gx=0,gy=0,tx=0,ty=0,gr=false;
+  function gl(){gx+=(tx-gx)*.16;gy+=(ty-gy)*.16;g.style.transform='translate3d('+(gx-190)+'px,'+(gy-190)+'px,0)';
+    if(Math.abs(tx-gx)>.4||Math.abs(ty-gy)>.4)requestAnimationFrame(gl);else gr=false}
+  addEventListener('pointermove',function(e){if(e.pointerType!='mouse')return;tx=e.clientX;ty=e.clientY;g.style.opacity=1;if(!gr){gr=true;requestAnimationFrame(gl)}},{passive:true});
+  root.addEventListener('pointerleave',function(){g.style.opacity=0})}
 
-function finish(v){ge.textContent='';btn.disabled=true;var old=btn.textContent;btn.textContent='Please wait...';
-  notify(v).then(function(){unlock(v)},function(){btn.disabled=false;btn.textContent=old;ge.textContent='Could not send your details. Check your connection and try again.'})}
+/* ---------- 3D tilt + spotlight on cards ---------- */
+(function(){var els=document.querySelectorAll('.proj,.cert,.sk,.task,.resume,.facts .card,.edu');
+  els.forEach(function(el){var raf=0,ev,big=el.classList.contains('proj')||el.classList.contains('edu')||el.classList.contains('resume'),mx=big?2:6;
+    el.addEventListener('pointermove',function(e){if(e.pointerType!='mouse')return;ev=e;if(!raf)raf=requestAnimationFrame(upd)});
+    function upd(){raf=0;var r=el.getBoundingClientRect(),x=(ev.clientX-r.left)/r.width,y=(ev.clientY-r.top)/r.height;
+      el.style.setProperty('--mx',x*100+'%');el.style.setProperty('--my',y*100+'%');
+      if(R||!fine||!el.classList.contains('in')||el.classList.contains('edu'))return;
+      el.style.transition='transform .14s ease-out,border-color .25s,box-shadow .25s';el.style.transitionDelay='0s';
+      el.style.transform='perspective(900px) rotateX('+((.5-y)*mx).toFixed(2)+'deg) rotateY('+((x-.5)*mx*1.3).toFixed(2)+'deg) translateY(-3px)'}
+    el.addEventListener('pointerleave',function(){if(!el.style.transform)return;
+      el.style.transition='transform .55s cubic-bezier(.2,.8,.2,1),border-color .25s,box-shadow .25s';el.style.transform='';
+      setTimeout(function(){if(!el.matches(':hover')){el.style.transition='';el.style.transitionDelay=''}},600)})})})();
 
-form.addEventListener('submit',function(e){e.preventDefault();
-  if($('hp').value){unlock({name:'Guest',email:'',via:'bot'});return}
-  var a=checkName(nm.value),b=checkMail(ml.value);
-  setErr(nm,en,a);setErr(ml,em,b.msg,b.fix);
-  if(a){nm.focus();return}if(b.msg){ml.focus();return}
-  finish({name:cleanName(nm.value),email:ml.value.trim().toLowerCase(),via:'form'})});
-nm.addEventListener('blur',function(){if(nm.value)setErr(nm,en,checkName(nm.value))});
-ml.addEventListener('blur',function(){if(ml.value&&!em.querySelector('button')){var b=checkMail(ml.value);setErr(ml,em,b.msg,b.fix)}});
-nm.addEventListener('input',function(){if(nm.getAttribute('aria-invalid')=='true')setErr(nm,en,checkName(nm.value))});
-ml.addEventListener('input',function(){if(ml.getAttribute('aria-invalid')=='true'){var b=checkMail(ml.value);setErr(ml,em,b.msg,b.fix)}});
+/* ---------- magnetic buttons ---------- */
+if(fine&&!R)document.querySelectorAll('.btn').forEach(function(b){
+  b.addEventListener('pointermove',function(e){var r=b.getBoundingClientRect();b.style.translate=((e.clientX-r.left-r.width/2)*.22).toFixed(1)+'px '+((e.clientY-r.top-r.height/2)*.3).toFixed(1)+'px'});
+  b.addEventListener('pointerleave',function(){b.style.translate=''})});
 
-/* Continue with Google (shown only when googleClientId is set) */
-function jwt(t){try{var p=t.split('.')[1].replace(/-/g,'+').replace(/_/g,'/');return JSON.parse(decodeURIComponent(escape(atob(p+'==='.slice((p.length+3)%4)))))}catch(e){return null}}
-function onGoogle(r){var p=jwt(r&&r.credential);ge.textContent='';
-  if(!p||!/^(https:\/\/)?accounts\.google\.com$/.test(p.iss||'')||p.aud!==C.googleClientId||p.exp*1000<Date.now()||!p.email||p.email_verified===false){ge.textContent='Google sign-in failed. Please try again or use the form.';return}
-  var n=cleanName(p.name||'');if(checkName(n))n=cleanName((p.given_name||'')+' '+(p.family_name||''));if(checkName(n))n=p.email.split('@')[0];
-  finish({name:n,email:String(p.email).toLowerCase(),via:'google'})}
-if(C.googleClientId){var sc=document.createElement('script');sc.src='https://accounts.google.com/gsi/client';sc.async=true;sc.defer=true;
-  sc.onload=function(){try{google.accounts.id.initialize({client_id:C.googleClientId,callback:onGoogle});
-    google.accounts.id.renderButton($('gbtn'),{theme:'outline',size:'large',text:'continue_with',shape:'pill',logo_alignment:'left',width:Math.min(320,Math.max(200,gate.clientWidth-80))});$('gwrap').hidden=false}catch(e){}};
-  document.head.appendChild(sc)}
-/* tell me when a known visitor downloads the resume (once per visit) */
-var dlb=$('dl');if(dlb)dlb.addEventListener('click',function(){try{var v=JSON.parse(localStorage.getItem(K)||'null');
-  if(!v||!(C.notifyEndpoint||C.web3formsKey)||sessionStorage.getItem('nkm_dl'))return;sessionStorage.setItem('nkm_dl','1');send(v,'resume_download').catch(function(){})}catch(e){}});
-setTimeout(function(){if(!document.documentElement.classList.contains('ok'))try{nm.focus({preventScroll:true})}catch(e){}},400);
+/* ---------- skills filter ---------- */
+(function(){var fl=document.querySelectorAll('.fl'),cards=document.querySelectorAll('.sk');
+  fl.forEach(function(b){b.onclick=function(){var f=b.dataset.f;
+    fl.forEach(function(x){var on=x===b;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on)});
+    cards.forEach(function(c){var s=f=='all'||c.dataset.c==f;c.style.display=s?'':'none';
+      if(s){c.classList.add('in');if(!R){c.classList.remove('pop');void c.offsetWidth;c.classList.add('pop')}}})}})})();
+
+/* ---------- back to top + ring ---------- */
+(function(){var t=$('top'),pg=$('pg'),C=125.66,tick=false;
+  function upd(){tick=false;var h=root.scrollHeight-innerHeight,p=h>0?Math.min(1,scrollY/h):0;
+    pg.style.strokeDashoffset=C*(1-p);t.classList.toggle('show',scrollY>600)}
+  addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});
+  t.onclick=function(){scrollTo({top:0,behavior:R?'auto':'smooth'})};upd()})();
+
+/* ---------- lightbox: prev/next for certificates, arrows + swipe ---------- */
+(function(){var lb=$('lb'),im=lb.querySelector('img'),gal=[].slice.call(document.querySelectorAll('.certs .tile')),gi=-1,x0=null;
+  document.addEventListener('click',function(e){var b=e.target.closest('[data-lb]');if(!b)return;
+    var c=b.closest('.cert');gi=c?gal.indexOf(c.querySelector('.tile')):-1;lb.classList.toggle('gal',gi>=0)},true);
+  function step(d){if(gi<0||!lb.classList.contains('open'))return;gi=(gi+d+gal.length)%gal.length;
+    var t=gal[gi];im.style.animation='none';void im.offsetWidth;im.style.animation='';im.src=t.dataset.lb;im.alt=t.dataset.alt||''}
+  $('lbp').onclick=function(e){e.stopPropagation();step(-1)};
+  $('lbn').onclick=function(e){e.stopPropagation();step(1)};
+  document.addEventListener('keydown',function(e){if(e.key=='ArrowLeft')step(-1);else if(e.key=='ArrowRight')step(1)});
+  lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)>60)step(dx<0?1:-1)})})();
 })();
-</script>
 
+</script>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)},R=matchMedia('(prefers-reduced-motion:reduce)').matches,root=document.documentElement;
+
+/* toast */
+var tt=0;function toast(m){var t=$('toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){t.classList.remove('on')},1800)}
+var cpb=$('cp');if(cpb)cpb.addEventListener('click',function(){toast('Email copied')});
+
+/* nav shadow on scroll */
+var nav=$('nav');function sc(){nav.classList.toggle('scrolled',scrollY>8)}addEventListener('scroll',sc,{passive:true});sc();
+
+/* hero arm: click to grip */
+var st=document.querySelector('.stage');
+if(st){st.addEventListener('pointerdown',function(){window.__g=1});['pointerup','pointerleave','pointercancel'].forEach(function(e){st.addEventListener(e,function(){window.__g=0})})}
+
+/* eYRC overall counter */
+(function(){var o=document.querySelector('.ov');if(!o)return;var n=o.querySelector('[data-f]');
+  new IntersectionObserver(function(es,io){if(!es[0].isIntersecting)return;io.disconnect();
+    if(R)return;var to=parseFloat(n.dataset.f),t0=performance.now();
+    (function f(t){var p=Math.min(1,(t-t0)/1400);n.textContent=(to*(1-Math.pow(1-p,3))).toFixed(2);if(p<1)requestAnimationFrame(f)})(t0)},{threshold:.4}).observe(o)})();
+
+/* section tag scramble */
+if(!R)document.querySelectorAll('.tag').forEach(function(t){var txt=t.textContent,done=false,A='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  new MutationObserver(function(){if(done||!t.classList.contains('in'))return;done=true;var k=0,iv=setInterval(function(){
+    k++;t.textContent=txt.split('').map(function(c,i){return i<k/2?c:A[Math.floor(Math.random()*26)]}).join('');
+    if(k/2>=txt.length){clearInterval(iv);t.textContent=txt}},38)}).observe(t,{attributes:true,attributeFilter:['class']})});
+
+/* timeline fill */
+(function(){var tl=document.querySelector('.tl');if(!tl||R)return;var tk=false;
+  function u(){tk=false;var r=tl.getBoundingClientRect(),p=(innerHeight*.65-r.top)/r.height;tl.style.setProperty('--tp',Math.max(.04,Math.min(1,p)))}
+  addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(u)}},{passive:true});u()})();
+
+/* live clock, India time */
+(function(){var c=$('clk');if(!c)return;var f;try{f=new Intl.DateTimeFormat('en-IN',{timeZone:'Asia/Kolkata',hour:'numeric',minute:'2-digit',hour12:true})}catch(e){return}
+  function u(){c.textContent=f.format(new Date()).toUpperCase()+' IST'}u();setInterval(u,20000)})();
+
+/* quick navigation palette: Ctrl/Cmd+K or / */
+(function(){
+var mac=/Mac|iPhone|iPad/.test(navigator.platform||''),kb=$('kb');if(kb)kb.textContent=(mac?'⌘':'Ctrl ')+'K';
+function go(id){return function(){if(id=='home')scrollTo({top:0,behavior:R?'auto':'smooth'});else{var e=$(id);if(e)e.scrollIntoView({behavior:R?'auto':'smooth'})}}}
+var S=[['home','Home'],['resume','Resume'],['about','About'],['skills','Skills'],['projects','Projects'],['eyrc','eYRC competition'],['experience','Experience'],['education','Education'],['certificates','Certificates'],['contact','Contact']];
+var items=S.map(function(s){return{l:s[1],h:'Go to',f:go(s[0])}}).concat([
+ {l:'Toggle dark / light theme',h:'Action',f:function(){$('th').click()}},
+ {l:'Preview resume',h:'Action',f:function(){$('rpv').click()}},{l:'Download resume (PDF)',h:'Action',f:function(){$('dl').click()}},
+ {l:'Copy email address',h:'Action',f:function(){$('cp').click()}},
+ {l:'Send an email',h:'Action',f:function(){location.href='mailto:info.navneet.net@gmail.com'}},
+ {l:'Save contact (.vcf)',h:'Action',f:function(){$('vc').click()}},{l:'Share this portfolio',h:'Action',f:function(){$('sh').click()}},{l:'Copy phone number',h:'Action',f:function(){var p='+91 74820 37075';(navigator.clipboard?navigator.clipboard.writeText(p):Promise.reject()).then(function(){toast('Phone copied')},function(){toast('Copy failed')})}},{l:'Open LinkedIn',h:'Link',f:function(){window.open('https://www.linkedin.com/in/navneet-kumar-mishra-a20626336','_blank','noopener')}},
+ {l:'Open Instagram',h:'Link',f:function(){window.open('https://www.instagram.com/itz.navneet.innet','_blank','noopener')}}]);
+var ov=document.createElement('div');ov.id='cmd';ov.hidden=true;
+ov.innerHTML='<div class="cbox" role="dialog" aria-modal="true" aria-label="Quick navigation"><input id="cq" type="text" placeholder="Jump to a section or action…" autocomplete="off" spellcheck="false" aria-controls="cl"><ul id="cl" role="listbox"></ul><p class="chint mono">↑↓ select · Enter open · Esc close</p></div>';
+document.body.appendChild(ov);
+var q=$('cq'),ul=$('cl'),cur=[],ix=0,last=null;
+function render(){var v=q.value.trim().toLowerCase();cur=items.filter(function(i){return !v||i.l.toLowerCase().indexOf(v)>-1});ix=Math.min(ix,Math.max(0,cur.length-1));
+  ul.innerHTML='';if(!cur.length){var n=document.createElement('li');n.className='none';n.textContent='No match. Try “skills” or “resume”.';ul.appendChild(n);return}
+  cur.forEach(function(it,i){var li=document.createElement('li');li.setAttribute('role','option');li.setAttribute('aria-selected',i==ix);
+    li.innerHTML='<span></span><small></small>';li.firstChild.textContent=it.l;li.lastChild.textContent=it.h;
+    li.onmouseenter=function(){ix=i;mark()};li.onclick=function(){run(i)};ul.appendChild(li)})}
+function mark(){[].forEach.call(ul.children,function(li,i){li.setAttribute('aria-selected',i==ix)});var s=ul.children[ix];if(s&&s.scrollIntoView)s.scrollIntoView({block:'nearest'})}
+function open(){if(!ov.hidden)return;last=document.activeElement;ov.hidden=false;q.value='';ix=0;render();document.body.style.overflow='hidden';q.focus()}
+function close(){ov.hidden=true;document.body.style.overflow='';if(last&&last.focus)last.focus()}
+function run(i){var it=cur[i];if(!it)return;close();setTimeout(it.f,60)}
+q.addEventListener('input',function(){ix=0;render()});
+ov.addEventListener('click',function(e){if(e.target===ov)close()});
+if(kb)kb.onclick=open;
+document.addEventListener('keydown',function(e){
+  var typing=/INPUT|TEXTAREA|SELECT/.test((document.activeElement||{}).tagName||'');
+  if((e.key=='k'||e.key=='K')&&(e.ctrlKey||e.metaKey)){e.preventDefault();ov.hidden?open():close();return}
+  if(e.key=='/'&&!typing&&ov.hidden){e.preventDefault();open();return}
+  if(ov.hidden)return;
+  if(e.key=='Escape'){e.preventDefault();close()}
+  else if(e.key=='ArrowDown'){e.preventDefault();ix=cur.length?(ix+1)%cur.length:0;mark()}
+  else if(e.key=='ArrowUp'){e.preventDefault();ix=cur.length?(ix-1+cur.length)%cur.length:0;mark()}
+  else if(e.key=='Enter'){e.preventDefault();run(ix)}
+  else if(e.key=='Tab'){e.preventDefault()}});
+})();
+})();
+
+</script>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)},R=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function toast(m){var t=$('toast');if(!t)return;t.textContent=m;t.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(function(){t.classList.remove('on')},2000)}
+
+/* skill chip -> highlights projects that use it */
+(function(){var chips=document.querySelectorAll('.sk .chips li'),projs=document.querySelectorAll('.proj'),cur=null;
+  function clear(){chips.forEach(function(c){c.classList.remove('act')});projs.forEach(function(p){p.classList.remove('match');p.querySelectorAll('.chips li').forEach(function(c){c.classList.remove('hit')})})}
+  function pick(c){var k=c.textContent.trim().toLowerCase();
+    if(cur===c){clear();cur=null;return}
+    clear();cur=c;c.classList.add('act');var first=null,n=0;
+    projs.forEach(function(p){var hit=false;p.querySelectorAll('.chips li').forEach(function(x){if(x.textContent.trim().toLowerCase()==k){x.classList.add('hit');hit=true}});
+      if(hit){p.classList.add('match');n++;if(!first)first=p}});
+    if(!n){toast('No project is tagged '+c.textContent.trim()+' yet');return}
+    toast(c.textContent.trim()+' is used in '+n+(n>1?' projects':' project'));
+    if(first)setTimeout(function(){first.scrollIntoView({behavior:R?'auto':'smooth',block:'center'})},350)}
+  chips.forEach(function(c){c.tabIndex=0;c.setAttribute('role','button');c.title='Show projects that use this';
+    c.addEventListener('click',function(){pick(c)});
+    c.addEventListener('keydown',function(e){if(e.key=='Enter'||e.key==' '){e.preventDefault();pick(c)}})})})();
+
+/* lightbox zoom: click / tap to zoom, move to pan */
+(function(){var lb=$('lb'),im=lb.querySelector('img');
+  function reset(){im.classList.remove('z');im.style.transformOrigin=''}
+  im.addEventListener('click',function(e){if(im.classList.contains('z')){reset();return}
+    var r=im.getBoundingClientRect();im.style.transformOrigin=((e.clientX-r.left)/r.width*100)+'% '+((e.clientY-r.top)/r.height*100)+'%';im.classList.add('z')});
+  im.addEventListener('pointermove',function(e){if(!im.classList.contains('z')||e.pointerType!='mouse')return;
+    var r=lb.getBoundingClientRect();im.style.transformOrigin=(e.clientX/r.width*100)+'% '+(e.clientY/r.height*100)+'%'});
+  new MutationObserver(reset).observe(im,{attributes:true,attributeFilter:['src']});
+  new MutationObserver(function(){if(!lb.classList.contains('open'))reset()}).observe(lb,{attributes:true,attributeFilter:['class']})})();
+
+/* save contact (.vcf) */
+var vc=$('vc');if(vc)vc.onclick=function(){
+  var v=['BEGIN:VCARD','VERSION:3.0','FN:Navneet Kumar Mishra','N:Mishra;Navneet Kumar;;;','TITLE:B.Tech ECE Student, Embedded Systems and Robotics','ORG:GEC Kishanganj','TEL;TYPE=CELL:+917482037075','EMAIL:info.navneet.net@gmail.com','URL:'+location.href.split('#')[0],'END:VCARD'].join('\r\n');
+  try{var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([v],{type:'text/vcard'}));a.download='Navneet_Kumar_Mishra.vcf';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(a.href)},2000);toast('Contact file saved')}catch(e){toast('Could not save contact')}};
+
+/* share */
+var sh=$('sh');if(sh)sh.onclick=function(){var u=location.href.split('#')[0],d={title:'Navneet Kumar Mishra',text:'Portfolio of Navneet Kumar Mishra: embedded systems, robotics and IoT.',url:u};
+  if(navigator.share){navigator.share(d).catch(function(){})}
+  else if(navigator.clipboard){navigator.clipboard.writeText(u).then(function(){toast('Portfolio link copied')},function(){toast('Copy failed')})}
+  else toast(u)};
+
+/* J / K jump between sections */
+(function(){var ids=['home','resume','about','skills','projects','eyrc','experience','education','certificates','contact'];
+  document.addEventListener('keydown',function(e){
+    if(e.ctrlKey||e.metaKey||e.altKey)return;var k=e.key.toLowerCase();if(k!='j'&&k!='k')return;
+    if(/INPUT|TEXTAREA|SELECT/.test((document.activeElement||{}).tagName||''))return;
+    if(!$('cmd').hidden||$('lb').classList.contains('open')||!$('pdfv').hidden)return;
+    var tops=ids.map(function(i){return $(i).getBoundingClientRect().top}),t=-1;
+    if(k=='j'){for(var i=0;i<ids.length;i++)if(tops[i]>90){t=i;break}}
+    else{for(var i=ids.length-1;i>=0;i--)if(tops[i]<-30){t=i;break}}
+    if(t<0)return;e.preventDefault();
+    if(t==0)scrollTo({top:0,behavior:R?'auto':'smooth'});else $(ids[t]).scrollIntoView({behavior:R?'auto':'smooth'})})
+  var h=document.querySelector('.chint');if(h)h.textContent='↑↓ select · Enter open · Esc close · J / K jump sections'})();
+})();
+
+</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)},PDF='assets/Navneet_Kumar_Mishra_Resume.pdf',
+rp=document.querySelector('.rprev'),rc=$('rc'),meta=$('rmeta'),ov=$('pdfv'),body=$('pbody'),
+pdf=null,loading=null,failed=false,zoom=1,rt=0,last=null;
+function fmt(d){try{return new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'short',year:'numeric'}).format(d)}catch(e){return ''}}
+function pdfDate(s){var m=/D:(\d{4})(\d{2})?(\d{2})?/.exec(s||'');return m?new Date(+m[1],(+m[2]||1)-1,+m[3]||1):null}
+function fallback(){failed=true;if(rp){rp.classList.remove('ld');rp.classList.add('rdy');
+  if(rc)rc.remove();var o=document.createElement('object');o.data=PDF+'#toolbar=0&navpanes=0&view=Fit';o.type='application/pdf';o.setAttribute('aria-label','Resume preview');rp.appendChild(o)}}
+function load(){if(loading)return loading;
+  loading=new Promise(function(ok,no){if(!window.pdfjsLib){no();return}
+    pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    var lm=null;
+    fetch(PDF,{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;lm=r.headers.get('Last-Modified');return r.arrayBuffer()})
+    .then(function(b){return pdfjsLib.getDocument({data:b}).promise})
+    .then(function(d){pdf=d;return d.getMetadata().catch(function(){return null}).then(function(m){return[d,m,lm]})})
+    .then(function(a){var d=a[0],m=a[1],lm=a[2],dt=pdfDate(m&&m.info&&(m.info.ModDate||m.info.CreationDate));
+      if(!dt&&lm){var x=new Date(lm);if(!isNaN(x)&&x.getFullYear()>2000)dt=x}
+      if(meta)meta.textContent='PDF · '+d.numPages+(d.numPages>1?' pages':' page')+(dt?' · Updated '+fmt(dt):'');
+      return d.getPage(1)}).then(function(pg){
+        var v1=pg.getViewport({scale:1}),sc=380/v1.width,vp=pg.getViewport({scale:sc});
+        rc.width=vp.width;rc.height=vp.height;rp.style.aspectRatio=v1.width+' / '+v1.height;
+        return pg.render({canvasContext:rc.getContext('2d'),viewport:vp}).promise}).then(function(){rp.classList.remove('ld');rp.classList.add('rdy');ok()}).catch(no)});
+  loading.catch(fallback);return loading}
+function pages(){var t=++rt;body.innerHTML='';
+  var base=Math.min(body.clientWidth-32,900),w=Math.max(200,base*zoom),dpr=Math.min(2.5,devicePixelRatio||1),n=Math.min(pdf.numPages,12),i=1;
+  (function next(){if(i>n||t!=rt)return;pdf.getPage(i++).then(function(pg){var v1=pg.getViewport({scale:1}),vp=pg.getViewport({scale:w/v1.width*dpr}),c=document.createElement('canvas');
+    c.width=vp.width;c.height=vp.height;c.style.width=w+'px';c.style.height=(w*v1.height/v1.width)+'px';body.appendChild(c);
+    return pg.render({canvasContext:c.getContext('2d'),viewport:vp}).promise}).then(next)})()}
+function openV(){if(failed||!window.pdfjsLib){window.open(PDF,'_blank','noopener');return}
+  last=document.activeElement;ov.hidden=false;document.body.style.overflow='hidden';zoom=1;body.innerHTML='<p class="pmsg">Loading resume…</p>';$('pcl').focus();
+  load().then(function(){if(!ov.hidden)pages()},function(){closeV();window.open(PDF,'_blank','noopener')})}
+function closeV(){ov.hidden=true;document.body.style.overflow='';rt++;body.innerHTML='';if(last&&last.focus)last.focus()}
+document.addEventListener('click',function(e){if(e.target.closest('[data-pdf]')){e.preventDefault();openV()}else if(e.target===ov)closeV()});
+$('pcl').onclick=closeV;
+$('pz+').onclick=function(){zoom=Math.min(3,zoom+.25);if(pdf)pages()};
+$('pz-').onclick=function(){zoom=Math.max(.5,zoom-.25);if(pdf)pages()};
+document.addEventListener('keydown',function(e){if(ov.hidden)return;if(e.key=='Escape'){e.stopPropagation();closeV()}else if(e.key=='+'||e.key=='='){$('pz+').click()}else if(e.key=='-'){$('pz-').click()}},true);
+var sec=$('resume');
+function start(){if(!sec)return;new IntersectionObserver(function(es,io){if(es[0].isIntersecting){io.disconnect();load()}},{rootMargin:'800px 0px'}).observe(sec)}
+if(document.readyState=='complete')start();else addEventListener('load',start)
+})();
+
+</script>
 </body></html>
